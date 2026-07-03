@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jeanne Rigal | Portfolio</title>
-  <link href="./css/output.css" rel="stylesheet">
+  <link href="./src/css/output.css" rel="stylesheet">
 </head>
 <body class="bg-brand-dark overflow-x-hidden text-brand-dark">
 
   <header class="absolute top-[0px] left-[0px] w-full flex justify-center items-start gap-[64px] md:gap-[128px] px-[40px] py-[32px] z-[50]">
     
     <a href="#contact" aria-label="Ir a la sección de Contacto" class="block hover:scale-110 transition-transform duration-200 cursor-pointer mt-[8px]">
-      <img src="./assets/section-1/contact.png" alt="Contact" class="h-[47px] md:h-[55px] w-auto transform scale-150 drop-shadow-md">
+      <img src="src/assets/section-1/contact.png" alt="Contact" class="h-[47px] md:h-[55px] w-auto transform scale-150 drop-shadow-md">
     </a>
 
     <a href="#" class="flex flex-col items-center justify-center hover:opacity-80 transition-opacity duration-200">
@@ -20,7 +20,7 @@
     </a>
 
     <a href="#services" aria-label="Ir a la sección de Servicios" class="block hover:scale-110 transition-transform duration-200 cursor-pointer mt-[8px]">
-      <img src="./assets/section-1/services.png" alt="Services" class="h-[32px] md:h-[40px] w-auto transform scale-150 drop-shadow-md">
+      <img src="src/assets/section-1/services.png" alt="Services" class="h-[32px] md:h-[40px] w-auto transform scale-150 drop-shadow-md">
     </a>
 
   </header>
@@ -37,25 +37,25 @@
     </h1>
     
     <!-- ================= 1. EDIFICIO (Capa Inferior) ================= -->
-    <img src="./assets/section-1/edificio_section1.svg" alt="Edificio" class="absolute bottom-[0px] left-[0px] md:left-[8px] w-[45%] md:w-[50%] max-w-[850px] z-[2] drop-shadow-xl">
+    <img src="src/assets/section-1/edificio_section1.svg" alt="Edificio" class="absolute bottom-[0px] left-[0px] md:left-[8px] w-[45%] md:w-[50%] max-w-[850px] z-[2] drop-shadow-xl">
 
     <!-- ================= 2. ESTRELLAS (Capa Media) ================= -->
     <!-- z-[15] las pone encima del edificio (10) pero debajo del estuche (20) -->
-    <img src="./assets/section-1/estrellas_section1.svg" alt="Estrellas" class="absolute bottom-[-128px] left-[16px] md:bottom-[-128px] w-[45%] md:w-[30%] max-w-[300px] z-[3] pointer-events-none drop-shadow-md">
+    <img src="src/assets/section-1/estrellas_section1.svg" alt="Estrellas" class="absolute bottom-[-128px] left-[16px] md:bottom-[-128px] w-[45%] md:w-[30%] max-w-[300px] z-[3] pointer-events-none drop-shadow-md">
 
     <!-- ================= CONTENEDOR DEL ESTUCHE GRIS (Capa Superior) ================= -->
     <div class="absolute top-[-8%] md:top-[-8%] left-[10%] md:left-[14%] z-[6] w-[90%] max-w-[38%]">
       
       <!-- Fondo del estuche gris -->
-      <img src="./assets/section-1/lienzo_gris.svg" alt="Lienzo Gris" class="w-full h-auto drop-shadow-2xl relative z-[10]">
+      <img src="src/assets/section-1/lienzo_gris.svg" alt="Lienzo Gris" class="w-full h-auto drop-shadow-2xl relative z-[10]">
       
       <!-- Sombra interna del estuche -->
       <!-- z-[15] la coloca sobre el lienzo gris pero debajo de los textos -->
-      <img src="./assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[28%] left-[0px] w-full h-auto z-[15] pointer-events-none">
+      <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[28%] left-[0px] w-full h-auto z-[15] pointer-events-none">
 
       <!-- Sombra 2 interna del estuche -->
       <!-- z-[15] la coloca sobre el lienzo gris pero debajo de los textos -->
-      <img src="./assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[58%] left-[0px] w-full h-auto z-[15] pointer-events-none">
+      <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[58%] left-[0px] w-full h-auto z-[15] pointer-events-none">
 
 
       <!-- Textos -->
@@ -82,23 +82,23 @@
 
 <!-- ================= OJOS DORADOS ================= -->
     <!-- Agregamos animate-[pulse_4s_ease-in-out_infinite] para un latido lento -->
-    <img src="./assets/section-1/ojos_section1.svg" alt="Ojos Dorados" class="absolute top-[80px] md:top-[15%] right-[10%] md:right-[12%] w-[120px] md:w-[14%] z-[5] drop-shadow-md pointer-events-none animate-[pulse_4s_ease-in-out_infinite]">
+    <img src="src/assets/section-1/ojos_section1.svg" alt="Ojos Dorados" class="absolute top-[80px] md:top-[15%] right-[10%] md:right-[12%] w-[120px] md:w-[14%] z-[5] drop-shadow-md pointer-events-none animate-[pulse_4s_ease-in-out_infinite]">
     <!-- ============= Cuadro lado derecho ========== -->
-    <img src="./assets/section-1/cuadro_section1.svg" alt="Cuadro" class="absolute top-[450px] md:top-[45%] right-[10%] md:right-[8%] w-[120px] md:w-[20%] z-[2] drop-shadow-md pointer-events-none">
-
+    <img src="src/assets/section-1/cuadro_section1.svg" alt="Cuadro" class="absolute top-[450px] md:top-[45%] right-[10%] md:right-[8%] w-[120px] md:w-[20%] z-[2] drop-shadow-md pointer-events-none">
+    
     <!-- ================= MUJER (Lado Derecho con Recorte Independiente) ================= -->
     <!-- Este div (la caja invisible) cubre toda la sección (inset-0) y TIENE overflow-hidden -->
     <!-- z-[30] mantiene la capa en su lugar, pointer-events-none evita que esta caja invisible bloquee clics -->
     <div class="absolute inset-0 overflow-hidden z-[3] pointer-events-none">
       
       <!-- La imagen de la mujer adentro. Si la bajas con valores negativos (ej. -bottom-[50px]), se cortará a la perfección -->
-      <img src="./assets/section-1/mujer_section1.png" alt="Mujer" class="absolute -bottom-[20%] right-[0px] md:-right-[100px] w-[250px] md:w-[23%] drop-shadow-xl z-[41]">
+      <img src="src/assets/section-1/mujer_section1.png" alt="Mujer" class="absolute -bottom-[20%] right-[0px] md:-right-[100px] w-[250px] md:w-[23%] drop-shadow-xl z-[41]">
       
     </div>
 
     <!-- ================= OJOS ENTRE SECCIÓN (Abajo a la derecha) ================= -->
     <!-- z-[40] asegura que sobrepasen el corte hacia la sección 2 -->
-    <img src="./assets/section-1/ojitos_entre_section.svg" alt="Ojos" class="absolute bottom-[-10%] md:bottom-[-15%] right-[120px] md:right-[90px] w-[35%] md:w-[25%] max-w-[15%] z-[6] drop-shadow-lg transition-transform hover:scale-110 cursor-pointer">
+    <img src="src/assets/section-1/ojitos_entre_section.svg" alt="Ojos" class="absolute bottom-[-10%] md:bottom-[-15%] right-[120px] md:right-[90px] w-[35%] md:w-[25%] max-w-[15%] z-[6] drop-shadow-lg transition-transform hover:scale-110 cursor-pointer">
     
   </section>
 
@@ -112,7 +112,7 @@
     <div class="absolute top-[0px] left-[0px] w-[100%] md:w-[50%] h-full">
       
       <!-- Fondo del ticket -->
-      <img src="./assets/section-2/guest_section2.svg" alt="Guest" class="h-full w-auto object-contain object-left-top relative z-[2] drop-shadow-md pointer-events-none">
+      <img src="src/assets/section-2/guest_section2.svg" alt="Guest" class="h-full w-auto object-contain object-left-top relative z-[2] drop-shadow-md pointer-events-none">
 
       <!-- ================= TEXTOS 100% INDEPENDIENTES ================= -->
       <!-- Z-[5] para brillar sobre la capa oscura -->
@@ -149,7 +149,7 @@
 
 <!-- ================= 3. AUTO (Abajo a la derecha) ================= -->
     <!-- Quitamos pointer-events-none y agregamos una transición de movimiento lateral (-translate-x-6) al hacer hover -->
-    <img src="./assets/section-2/auto_section2.svg" alt="Auto" class="absolute bottom-[2px] md:-bottom-[5px] right-[-80px] md:right-[-50px] w-[70%] md:w-[40%] max-w-[650px] z-[1] drop-shadow-xl transition-transform duration-500 ease-out hover:-translate-x-6 hover:scale-105 cursor-pointer">
+    <img src="src/assets/section-2/auto_section2.svg" alt="Auto" class="absolute bottom-[2px] md:-bottom-[5px] right-[-80px] md:right-[-50px] w-[70%] md:w-[40%] max-w-[650px] z-[1] drop-shadow-xl transition-transform duration-500 ease-out hover:-translate-x-6 hover:scale-105 cursor-pointer">
     
   </section>
 
@@ -159,7 +159,7 @@
     <!-- ================= 1. PERIÓDICO (Fondo Derecha) ================= -->
     <div class="absolute top-[0px] right-[0px] z-[1] hidden md:block w-[50%] h-full">
       <!-- object-top asegura que la cabecera "Parade" no se corte -->
-      <img src="./assets/section-3/periodico_section3.svg" alt="Revista" class="w-full h-full object-cover object-top pointer-events-none">
+      <img src="src/assets/section-3/periodico_section3.svg" alt="Revista" class="w-full h-full object-cover object-top pointer-events-none">
     </div>
 
     <!-- ================= 2. CAPA OSCURA ================= -->
@@ -209,12 +209,12 @@
 
 <!-- ================= 4. GALLETAS (Costura central) ================= -->
     <!-- Quitamos pointer-events-none para que detecte el mouse y agregamos una rotación completa de 180 grados al hacer hover -->
-    <img src="./assets/section-3/Galletas_mitad_section3.svg" alt="Galletas" class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[85%] w-auto z-[4] drop-shadow-xl transition-transform duration-700 hover:rotate-180 cursor-pointer">
+    <img src="src/assets/section-3/Galletas_mitad_section3.svg" alt="Galletas" class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[85%] w-auto z-[4] drop-shadow-xl transition-transform duration-700 hover:rotate-180 cursor-pointer">
 
     <!-- ================= 5. gorra ================= -->
     <!-- Posicionado específicamente sobre la cabeza de la chica en el periódico (arriba a la derecha) -->
     <!-- Puedes ajustar top-[26%] o right-[16%] si necesitas moverlo unos píxeles -->
-    <img src="./assets/section-3/gorra_section3.svg" alt="Gorra" class="absolute top-[21%] right-[13%] w-[120px] md:w-[15%] z-[5] drop-shadow-2xl cursor-move transition-transform hover:scale-105">
+    <img src="src/assets/section-3/gorra_section3.svg" alt="Gorra" class="absolute top-[21%] right-[13%] w-[120px] md:w-[15%] z-[5] drop-shadow-2xl cursor-move transition-transform hover:scale-105">
 
   </section>
 
@@ -234,18 +234,18 @@
       </div>
 
       <div class="absolute bottom-[10%] md:bottom-[2%] left-[50%] transform -translate-x-1/2 z-[10]">
-        <img src="./assets/section-4/deezer.svg" alt="Deezer" class="h-[50px] md:h-[70px] drop-shadow-md">
+        <img src="src/assets/section-4/deezer.svg" alt="Deezer" class="h-[50px] md:h-[70px] drop-shadow-md">
       </div>
 
       <div class="absolute bottom-[0px] left-[5%] md:left-[8%] w-[100px] md:w-[150px] transform translate-y-1/2 z-[20] pointer-events-none">
-        <img src="./assets/section-4/estrella.png" alt="Estrella" class="w-full h-full drop-shadow-xl animate-[spin_6s_linear_infinite]">  
+        <img src="src/assets/section-4/estrella.png" alt="Estrella" class="w-full h-full drop-shadow-xl animate-[spin_6s_linear_infinite]">  
       </div>
 
       <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-[5]">
-        <img src="./assets/section-4/imagen1.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[1]">
-        <img src="./assets/section-4/imagen2.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[2]">
-        <img src="./assets/section-4/imagen3.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[3]">
-        <img src="./assets/section-4/imagen4.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[4]">
+        <img src="src/assets/section-4/imagen1.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[1]">
+        <img src="src/assets/section-4/imagen2.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[2]">
+        <img src="src/assets/section-4/imagen3.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[3]">
+        <img src="src/assets/section-4/imagen4.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[4]">
       </div>
 
     </div>
@@ -267,28 +267,28 @@
         </p>
 
         <div class="relative w-full h-[15vh] md:h-[35vh] overflow-hidden drop-shadow-2xl bg-black/10">
-          <img src="./assets/section-5/cinema1.png" alt="Cinema 1" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[4] transition-transform duration-500 hover:scale-[1.03] hover:z-[5] cursor-pointer">
-          <img src="./assets/section-5/cinema2.png" alt="Cinema 2" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[3] transition-transform duration-500 hover:scale-[1.03] hover:z-[5] cursor-pointer">
-          <img src="./assets/section-5/cinema3.png" alt="Cinema 3" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[2] transition-transform duration-500 hover:scale-[1.03] hover:z-[5] cursor-pointer">
-          <img src="./assets/section-5/cinema4.png" alt="Cinema 4" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[1] transition-transform duration-500 hover:scale-[1.03] hover:z-[5] cursor-pointer">
+          <img src="src/assets/section-5/cinema1.png" alt="Cinema 1" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[4] transition-transform duration-500 hover:scale-[1.03] hover:z-[5] cursor-pointer">
+          <img src="src/assets/section-5/cinema2.png" alt="Cinema 2" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[3] transition-transform duration-500 hover:scale-[1.03] hover:z-[5] cursor-pointer">
+          <img src="src/assets/section-5/cinema3.png" alt="Cinema 3" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[2] transition-transform duration-500 hover:scale-[1.03] hover:z-[5] cursor-pointer">
+          <img src="src/assets/section-5/cinema4.png" alt="Cinema 4" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[1] transition-transform duration-500 hover:scale-[1.03] hover:z-[5] cursor-pointer">
         </div>
       </div>
 
       <div class="w-full md:w-[35%] flex flex-col items-center md:items-start justify-center relative z-[2] transform -translate-y-[20px] md:-translate-y-[230px]">
         
-        <img src="./assets/section-5/playtime_section5.png" alt="Playtime" 
+        <img src="src/assets/section-5/playtime_section5.png" alt="Playtime" 
      class="w-[120px] md:w-[220px] mb-[15px] md:mb-[30px] drop-shadow-md self-center md:self-start md:-ml-[20px] transform -translate-x-[250px] transform translate-y-[250px]">
 
         <h3 class="font-body font-black text-[16px] md:text-[20px] text-brand-dark mb-[10px] md:mb-[15px] tracking-widest uppercase self-center drop-shadow-sm">
           FILM POSTER
         </h3>
 
-        <img src="./assets/section-5/film_poster.jpg" alt="Film Poster" class="h-[25vh] md:h-[45vh] w-auto object-contain self-center drop-shadow-2xl transition-transform duration-700 hover:scale-105 cursor-pointer">
+        <img src="src/assets/section-5/film_poster.jpg" alt="Film Poster" class="h-[25vh] md:h-[45vh] w-auto object-contain self-center drop-shadow-2xl transition-transform duration-700 hover:scale-105 cursor-pointer">
       </div>
 
-      <img src="./assets/section-5/estrella_section5.png" alt="Estrella" class="absolute bottom-[0px] left-[45%] transform -translate-x-1/2 translate-y-1/2 w-[90px] md:w-[150px] z-[20] drop-shadow-xl hover:rotate-12 transition-transform duration-300">
+      <img src="src/assets/section-5/estrella_section5.png" alt="Estrella" class="absolute bottom-[0px] left-[45%] transform -translate-x-1/2 translate-y-1/2 w-[90px] md:w-[150px] z-[20] drop-shadow-xl hover:rotate-12 transition-transform duration-300">
       
-      <img src="./assets/section-5/estrella_section5.png" alt="Estrella" class="absolute bottom-[0px] right-[10%] transform translate-y-1/2 w-[90px] md:w-[150px] z-[20] drop-shadow-xl hover:-rotate-12 transition-transform duration-300">
+      <img src="src/assets/section-5/estrella_section5.png" alt="Estrella" class="absolute bottom-[0px] right-[10%] transform translate-y-1/2 w-[90px] md:w-[150px] z-[20] drop-shadow-xl hover:-rotate-12 transition-transform duration-300">
     </div>
 </section>
  
@@ -308,15 +308,15 @@
         </h3>
       </div>
 
-      <img src="./assets/section-6/locutora_section6.svg" alt="Locutora" class="absolute bottom-0 left-[-5%] md:left-[-2%] w-[60%] md:w-[35%] max-w-[450px] z-[15] drop-shadow-2xl pointer-events-none">
+      <img src="src/assets/section-6/locutora_section6.svg" alt="Locutora" class="absolute bottom-0 left-[-5%] md:left-[-2%] w-[60%] md:w-[35%] max-w-[450px] z-[15] drop-shadow-2xl pointer-events-none">
 
-      <img src="./assets/section-6/valentin_section6.svg" alt="Saint Valentin" class="absolute top-[25%] md:top-[20%] left-[45%] md:left-[48%] w-[35%] md:w-[20%] z-[5] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-3 cursor-pointer">
+      <img src="src/assets/section-6/valentin_section6.svg" alt="Saint Valentin" class="absolute top-[25%] md:top-[20%] left-[45%] md:left-[48%] w-[35%] md:w-[20%] z-[5] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-3 cursor-pointer">
 
-      <img src="./assets/section-6/radio_section6.svg" alt="Radio" class="absolute top-[55%] md:top-[60%] left-[45%] md:left-[50%] w-[30%] md:w-[17%] z-[6] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:rotate-3 cursor-pointer">
+      <img src="src/assets/section-6/radio_section6.svg" alt="Radio" class="absolute top-[55%] md:top-[60%] left-[45%] md:left-[50%] w-[30%] md:w-[17%] z-[6] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:rotate-3 cursor-pointer">
 
-      <img src="./assets/section-6/comair_section6.svg" alt="Comair Logo" class="absolute top-[38%] md:top-[35%] right-[5%] md:right-[10%] w-[30%] md:w-[16%] z-[5] drop-shadow-md transition-transform duration-300 hover:scale-110 cursor-pointer">
+      <img src="src/assets/section-6/comair_section6.svg" alt="Comair Logo" class="absolute top-[38%] md:top-[35%] right-[5%] md:right-[10%] w-[30%] md:w-[16%] z-[5] drop-shadow-md transition-transform duration-300 hover:scale-110 cursor-pointer">
 
-      <img src="./assets/section-6/ces_section6.svg" alt="Ces Soirées" class="absolute top-[65%] md:top-[60%] right-[5%] md:right-[8%] w-[35%] md:w-[18%] z-[7] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-2 cursor-pointer">
+      <img src="src/assets/section-6/ces_section6.svg" alt="Ces Soirées" class="absolute top-[65%] md:top-[60%] right-[5%] md:right-[8%] w-[35%] md:w-[18%] z-[7] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-2 cursor-pointer">
 
   </section>
 
@@ -325,9 +325,9 @@
     
     <div class="sticky top-0 w-full h-screen bg-[url('../assets/section-5/fondo_section5.png')] bg-cover bg-center bg-no-repeat overflow-visible">
       
-      <img src="./assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-0 left-[35%] transform -translate-x-1/2 -translate-y-1/2 w-[80px] md:w-[120px] z-[20] drop-shadow-md pointer-events-none">
+      <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-0 left-[35%] transform -translate-x-1/2 -translate-y-1/2 w-[80px] md:w-[120px] z-[20] drop-shadow-md pointer-events-none">
       
-      <img src="./assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-0 right-[25%] transform translate-y-[-50%] w-[80px] md:w-[120px] z-[20] drop-shadow-md pointer-events-none">
+      <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-0 right-[25%] transform translate-y-[-50%] w-[80px] md:w-[120px] z-[20] drop-shadow-md pointer-events-none">
 
       <div class="absolute top-[10%] md:top-[10%] left-[5%] md:left-[8%] z-[10]">
         <h2 class="text-brand-red font-body font-black text-[45px] md:text-[50px] leading-[0.85] tracking-tighter drop-shadow-sm uppercase">
@@ -335,17 +335,17 @@
         </h2>
       </div>
 
-      <div class="absolute top-[35%vh] md:top-[35%] left-1/2 -translate-x-1/2 w-[90%] md:w-[84%] h-[50vh] md:h-[60vh] pointer-events-none z-[5] overflow-hidden">
-        <img src="./assets/section-7/imagen1.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[1]">
-        <img src="./assets/section-7/imagen2.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[2]">
-        <img src="./assets/section-7/imagen3.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[3]">
-        <img src="./assets/section-7/imagen4.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[4]">
-        <img src="./assets/section-7/imagen5.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[5]">
-        <img src="./assets/section-7/imagen6.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[6]">
+      <div class="absolute top-[35%] md:top-[35%] left-1/2 -translate-x-1/2 w-[90%] md:w-[84%] h-[50vh] md:h-[60vh] pointer-events-none z-[5] overflow-hidden">
+        <img src="src/assets/section-7/imagen1.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[1]">
+        <img src="src/assets/section-7/imagen2.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[2]">
+        <img src="src/assets/section-7/imagen3.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[3]">
+        <img src="src/assets/section-7/imagen4.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[4]">
+        <img src="src/assets/section-7/imagen5.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[5]">
+        <img src="src/assets/section-7/imagen6.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[6]">
       </div>
 
     </div>
   </section>
-  <script src="./js/animaciones.js"></script>  
+  <script src="src/js/animaciones.js"></script>  
 </body>
 </html>

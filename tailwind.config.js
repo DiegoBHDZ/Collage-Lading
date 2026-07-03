@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"], 
+  content: [
+    "./index.html",          // <-- ¡Añadimos el radar para la raíz!
+    "./src/**/*.{html,js}"   // Mantenemos esto para que siga detectando tus animaciones.js
+  ], 
   theme: {
     extend: {
       colors: {

@@ -758,8 +758,8 @@ video {
   top: 305px;
 }
 
-.top-\[35\%vh\] {
-  top: 35%vh;
+.top-\[35\%\] {
+  top: 35%;
 }
 
 .top-\[360px\] {
@@ -1935,8 +1935,8 @@ video {
     font-size: 138%;
   }
 
-  .md\:text-\[150\%\] {
-    font-size: 150%;
+  .md\:text-\[140\%\] {
+    font-size: 140%;
   }
 
   .md\:text-\[16px\] {
@@ -1989,17 +1989,5 @@ video {
 
   .md\:text-\[95px\] {
     font-size: 95px;
-  }
-
-  .md\:text-\[10\%\] {
-    font-size: 10%;
-  }
-
-  .md\:text-\[148\%\] {
-    font-size: 148%;
-  }
-
-  .md\:text-\[140\%\] {
-    font-size: 140%;
   }
 }
