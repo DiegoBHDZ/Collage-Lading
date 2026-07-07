@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Sunborn';
+    /* Usamos el nombre exacto del archivo y cambiamos el formato a 'opentype' */
+    src: url('../assets/fonts/sunborn-sans-one.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}

@@ -28,11 +28,11 @@
   <!-- ================= SECCIÓN 1: HERO ================= -->
   <section id="section-1" class="relative z-[10] w-full h-screen bg-[url('../assets/section-1/fondo-section-1.svg')] bg-cover bg-center bg-no-repeat">
     
-    <div class="absolute inset-0 bg-black/40 z-[4] pointer-events-none"></div>
+    
     
     <!-- TÍTULO: MEET ME -->
     <!-- z-[30] asegura que esté por encima del estuche -->
-    <h1 class="absolute top-[120px] md:top-[23%] left-[24px] md:left-[48px] text-brand-red font-title font-black tracking-tighter text-[70px] md:text-[550%] leading-none tracking-tight z-[30] drop-shadow-md pointer-events-none">
+    <h1 class="absolute top-[120px] md:top-[23%] left-[24px] md:left-[48px] text-brand-red font-title tracking-tighter text-[70px] md:text-[550%] leading-none tracking-tight z-[30] drop-shadow-md pointer-events-none">
       MEET ME
     </h1>
     
@@ -60,7 +60,7 @@
 
       <!-- Textos -->
       <!-- z-[20] los mantiene legibles por encima de la sombra -->
-      <div class="absolute inset-0 z-[20] text-white font-body font-bold text-[16px] md:text-[138%] leading-snug text-left">
+      <div class="absolute inset-0 z-[20] text-white font-body font-bold text-[16px] md:text-[130%] leading-snug text-left">
         <div class="absolute top-[40%] bottom-[52%] left-[25%] right-[10%] flex items-center">
           <p>
             Helping brands,<br>
@@ -154,68 +154,50 @@
   </section>
 
 <!-- ================= SECCIÓN 3 ================= -->
-  <section id="section-3" class="relative z-[0] w-full h-screen bg-[url('../assets/section-3/fondo_section3.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
+ <section id="section-3" class="relative z-[0] w-full min-h-screen bg-[url('../assets/section-3/fondo_section3.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
 
-    <!-- ================= 1. PERIÓDICO (Fondo Derecha) ================= -->
     <div class="absolute top-[0px] right-[0px] z-[1] hidden md:block w-[50%] h-full">
-      <!-- object-top asegura que la cabecera "Parade" no se corte -->
       <img src="src/assets/section-3/periodico_section3.svg" alt="Revista" class="w-full h-full object-cover object-top pointer-events-none">
     </div>
-
-    <!-- ================= 2. CAPA OSCURA ================= -->
-    <!-- Cubre la sección entera (fondo y periódico) pero se queda debajo de los textos -->
     <div class="absolute inset-0 bg-black/40 z-[2] pointer-events-none"></div>
 
-    <!-- ================= 3. MITAD IZQUIERDA: TEXTOS ================= -->
-    <!-- En lugar de centrar, usamos top-[8%] para que nazca desde arriba -->
-    <div class="absolute top-[8%] md:top-[10%] left-[5%] md:left-[8%] w-[90%] md:w-[45%] z-[3]">
-      
-      <!-- TÍTULO: ABOUT ME -->
-      <div class="text-brand-red font-title font-black tracking-tighter leading-[0.8] mb-[30px] md:mb-[50px] drop-shadow-md">
-        <h2 class="text-[70px] md:text-[110px]">ABOUT</h2>
-        <!-- ml-[35%] replica la sangría agresiva del diseño original -->
-        <h2 class="text-[70px] md:text-[110px] ml-[35%] md:ml-[40%]">ME</h2>
+    <div class="relative w-full max-w-[1440px] mx-auto min-h-screen h-full pointer-events-none z-[3]">
+
+      <div class="absolute top-[8%] md:top-[10%] left-[5%] md:left-[8%] w-[90%] md:w-[45%] max-w-[600px] pointer-events-auto">
+        
+        <div class="text-brand-red font-title font-black tracking-tighter leading-[0.8] mb-[30px] md:mb-[50px] drop-shadow-md">
+          <h2 class="text-[70px] md:text-[110px]">ABOUT</h2>
+          <h2 class="text-[70px] md:text-[110px] ml-[80px] md:ml-[150px]">ME</h2>
+        </div>
+
+        <div class="text-dark font-body space-y-[15px]">
+          <h3 class="text-brand-red font-title font-black tracking-tighter text-[35px] md:text-[35px] tracking-wide leading-none mb-[16px] drop-shadow-sm">EDUCATION</h3>
+          
+          <div>
+            <p class="font-body font-black tracking-tighter text-[16px] md:text-[130%] leading-snug">CELSA – SORBONNE UNIVERSITÉ</p>
+            <p class="text-[14px] md:text-[100%] leading-snug">2025–2027</p>
+            <p class="text-[14px] md:text-[100%] leading-snug">Master's in Consulting, Management & Media – Creative & Cultural Industries</p>
+          </div>
+
+          <div>
+            <p class="font-body font-black tracking-tighter text-[16px] md:text-[130%] leading-snug">UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO (UNAM)</p>
+            <p class="text-[14px] md:text-[100%] leading-snug">2024–2025</p>
+            <p class="text-[14px] md:text-[100%] leading-snug">Coursework : Marketing & Media Theory</p>
+          </div>
+
+          <div>
+            <p class="font-body font-black tracking-tighter text-[16px] md:text-[130%] leading-snug">UNIVERSITÉ PARIS 1 PANTHÉON SORBONNE</p>
+            <p class="text-[14px] md:text-[100%] leading-snug">2020–2023</p>
+            <p class="text-[14px] md:text-[100%] leading-snug">Double Bachelor's – Law & Economics</p>
+          </div>
+        </div>
       </div>
 
-      <!-- BLOQUES DE EDUCACIÓN -->
-      <!-- Puestos en blanco (text-white) para brillar sobre la capa oscura -->
-      <div class="text-dark font-body space-y-[20px]">
-        
-        <h3 class="text-brand-red font-title font-black tracking-tighter text-[35px] md:text-[40px] tracking-wide leading-none mb-[16px] drop-shadow-sm">EDUCATION</h3>
-        
-        <!-- Bloque 1 -->
-        <div>
-          <p class="font-body font-black tracking-tighter text-[16px] md:text-[140%] leading-snug">CELSA – SORBONNE UNIVERSITÉ</p>
-          <p class="text-[14px] md:text-[100%] leading-snug">2025–2027</p>
-          <p class="text-[14px] md:text-[100%] leading-snug">Master's in Consulting, Management & Media – Creative & Cultural Industries</p>
-        </div>
+      <img src="src/assets/section-3/Galletas_mitad_section3.svg" alt="Galletas" class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[85%] w-auto z-[4] drop-shadow-xl transition-transform duration-700 hover:rotate-180 cursor-pointer pointer-events-auto">
 
-        <!-- Bloque 2 -->
-        <div>
-          <p class="font-body font-black tracking-tighter text-[16px] md:text-[140%] leading-snug">UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO (UNAM)</p>
-          <p class="text-[14px] md:text-[100%] leading-snug">2024–2025</p>
-          <p class="text-[14px] md:text-[100%] leading-snug">Coursework : Marketing & Media Theory</p>
-        </div>
+      <img src="src/assets/section-3/gorra_section3.svg" alt="Gorra" class="absolute top-[21%] right-[13%] w-[120px] md:w-[15%] max-w-[200px] z-[5] drop-shadow-2xl cursor-move transition-transform hover:scale-105 pointer-events-auto">
 
-        <!-- Bloque 3 -->
-        <div>
-          <p class="font-body font-black tracking-tighter text-[16px] md:text-[140%] leading-snug">UNIVERSITÉ PARIS 1 PANTHÉON SORBONNE</p>
-          <p class="text-[14px] md:text-[100%] leading-snug">2020–2023</p>
-          <p class="text-[14px] md:text-[100%] leading-snug">Double Bachelor's – Law & Economics</p>
-        </div>
-
-      </div>
     </div>
-
-<!-- ================= 4. GALLETAS (Costura central) ================= -->
-    <!-- Quitamos pointer-events-none para que detecte el mouse y agregamos una rotación completa de 180 grados al hacer hover -->
-    <img src="src/assets/section-3/Galletas_mitad_section3.svg" alt="Galletas" class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[85%] w-auto z-[4] drop-shadow-xl transition-transform duration-700 hover:rotate-180 cursor-pointer">
-
-    <!-- ================= 5. gorra ================= -->
-    <!-- Posicionado específicamente sobre la cabeza de la chica en el periódico (arriba a la derecha) -->
-    <!-- Puedes ajustar top-[26%] o right-[16%] si necesitas moverlo unos píxeles -->
-    <img src="src/assets/section-3/gorra_section3.svg" alt="Gorra" class="absolute top-[21%] right-[13%] w-[120px] md:w-[15%] z-[5] drop-shadow-2xl cursor-move transition-transform hover:scale-105">
-
   </section>
 
 
@@ -294,30 +276,33 @@
  
   <!-- ================= SECCIÓN 6 ================= -->
   <!-- z-[5] garantiza que la Sección 6 se mantenga por debajo de la Sección 5 y de sus estrellas puente -->
-<section id="section-6" class="relative w-full h-screen bg-[url('../assets/section-4/fondo_section4.png')] bg-cover bg-center bg-no-repeat overflow-hidden z-[1]">
+<section id="section-6" class="relative w-full min-h-screen bg-[url('../assets/section-4/fondo_section4.png')] bg-cover bg-center bg-no-repeat overflow-hidden z-[1]">
       
-      <div class="absolute top-[8%] md:top-[8%] left-[5%] md:left-[8%] z-[10]">
-        <h2 class="text-brand-red font-body font-black text-[55px] md:text-[75px] leading-[0.85] tracking-tighter drop-shadow-sm uppercase">
-          MORE<br>ABOUT<br>ME
-        </h2>
+      <div class="relative w-full max-w-[1440px] mx-auto min-h-screen h-full">
+
+        <div class="absolute top-[8%] md:top-[8%] left-[5%] md:left-[8%] z-[10]">
+          <h2 class="text-brand-red font-body font-black text-[55px] md:text-[75px] leading-[0.85] tracking-tighter drop-shadow-sm uppercase">
+            MORE<br>ABOUT<br>ME
+          </h2>
+        </div>
+
+        <div class="absolute top-[38%] md:top-[48%] left-[20%] md:left-[22%] z-[10]">
+          <h3 class="text-brand-red font-body font-black text-[28px] md:text-[40px] leading-[0.85] tracking-tighter drop-shadow-sm uppercase">
+            PODCAST -<br>RADIO<br>PRESENTER
+          </h3>
+        </div>
+
+        <img src="src/assets/section-6/locutora_section6.svg" alt="Locutora" class="absolute bottom-0 left-[0%] md:left-[-2%] w-[60%] md:w-[35%] max-w-[450px] z-[15] drop-shadow-2xl pointer-events-none">
+
+        <img src="src/assets/section-6/valentin_section6.svg" alt="Saint Valentin" class="absolute top-[25%] md:top-[20%] left-[45%] md:left-[48%] w-[35%] md:w-[20%] max-w-[250px] z-[5] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-3 cursor-pointer">
+
+        <img src="src/assets/section-6/radio_section6.svg" alt="Radio" class="absolute top-[55%] md:top-[60%] left-[45%] md:left-[50%] w-[30%] md:w-[17%] max-w-[200px] z-[6] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:rotate-3 cursor-pointer">
+
+        <img src="src/assets/section-6/comair_section6.svg" alt="Comair Logo" class="absolute top-[38%] md:top-[35%] right-[5%] md:right-[10%] w-[30%] md:w-[16%] max-w-[180px] z-[5] drop-shadow-md transition-transform duration-300 hover:scale-110 cursor-pointer">
+
+        <img src="src/assets/section-6/ces_section6.svg" alt="Ces Soirées" class="absolute top-[65%] md:top-[60%] right-[5%] md:right-[8%] w-[35%] md:w-[18%] max-w-[220px] z-[7] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-2 cursor-pointer">
+
       </div>
-
-      <div class="absolute top-[38%] md:top-[48%] left-[20%] md:left-[22%] z-[10]">
-        <h3 class="text-brand-red font-body font-black text-[28px] md:text-[40px] leading-[0.85] tracking-tighter drop-shadow-sm uppercase">
-          PODCAST -<br>RADIO<br>PRESENTER
-        </h3>
-      </div>
-
-      <img src="src/assets/section-6/locutora_section6.svg" alt="Locutora" class="absolute bottom-0 left-[-5%] md:left-[-2%] w-[60%] md:w-[35%] max-w-[450px] z-[15] drop-shadow-2xl pointer-events-none">
-
-      <img src="src/assets/section-6/valentin_section6.svg" alt="Saint Valentin" class="absolute top-[25%] md:top-[20%] left-[45%] md:left-[48%] w-[35%] md:w-[20%] z-[5] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-3 cursor-pointer">
-
-      <img src="src/assets/section-6/radio_section6.svg" alt="Radio" class="absolute top-[55%] md:top-[60%] left-[45%] md:left-[50%] w-[30%] md:w-[17%] z-[6] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:rotate-3 cursor-pointer">
-
-      <img src="src/assets/section-6/comair_section6.svg" alt="Comair Logo" class="absolute top-[38%] md:top-[35%] right-[5%] md:right-[10%] w-[30%] md:w-[16%] z-[5] drop-shadow-md transition-transform duration-300 hover:scale-110 cursor-pointer">
-
-      <img src="src/assets/section-6/ces_section6.svg" alt="Ces Soirées" class="absolute top-[65%] md:top-[60%] right-[5%] md:right-[8%] w-[35%] md:w-[18%] z-[7] drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-2 cursor-pointer">
-
   </section>
 
   <!-- ================= SECCIÓN 7 ================= -->

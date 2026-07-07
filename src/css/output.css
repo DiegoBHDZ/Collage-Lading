@@ -554,8 +554,24 @@ video {
   display: none;
 }
 
+@font-face {
+  font-family: 'Sunborn';
+
+  /* Usamos el nombre exacto del archivo y cambiamos el formato a 'opentype' */
+
+  src: url('../assets/fonts/sunborn-sans-one.otf') format('opentype');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
 .pointer-events-none {
   pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
 }
 
 .visible {
@@ -626,8 +642,8 @@ video {
   left: 50%;
 }
 
-.left-\[-5\%\] {
-  left: -5%;
+.left-\[0\%\] {
+  left: 0%;
 }
 
 .left-\[0px\] {
@@ -694,10 +710,6 @@ video {
   right: 13%;
 }
 
-.right-\[16\%\] {
-  right: 16%;
-}
-
 .right-\[25\%\] {
   right: 25%;
 }
@@ -736,10 +748,6 @@ video {
 
 .top-\[25\%\] {
   top: 25%;
-}
-
-.top-\[26\%\] {
-  top: 26%;
 }
 
 .top-\[28\%\] {
@@ -902,6 +910,11 @@ video {
   z-index: 7;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .-mt-\[5px\] {
   margin-top: -5px;
 }
@@ -926,8 +939,8 @@ video {
   margin-bottom: 30px;
 }
 
-.ml-\[35\%\] {
-  margin-left: 35%;
+.ml-\[80px\] {
+  margin-left: 80px;
 }
 
 .mt-\[10px\] {
@@ -1002,6 +1015,10 @@ video {
   height: 100vh;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-1\/4 {
   width: 25%;
 }
@@ -1074,8 +1091,28 @@ video {
   width: 100%;
 }
 
+.max-w-\[1440px\] {
+  max-width: 1440px;
+}
+
 .max-w-\[15\%\] {
   max-width: 15%;
+}
+
+.max-w-\[180px\] {
+  max-width: 180px;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
+}
+
+.max-w-\[220px\] {
+  max-width: 220px;
+}
+
+.max-w-\[250px\] {
+  max-width: 250px;
 }
 
 .max-w-\[300px\] {
@@ -1088,6 +1125,10 @@ video {
 
 .max-w-\[450px\] {
   max-width: 450px;
+}
+
+.max-w-\[600px\] {
+  max-width: 600px;
 }
 
 .max-w-\[650px\] {
@@ -1217,10 +1258,10 @@ video {
   gap: 64px;
 }
 
-.space-y-\[20px\] > :not([hidden]) ~ :not([hidden]) {
+.space-y-\[15px\] > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(20px * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(20px * var(--tw-space-y-reverse));
+  margin-top: calc(15px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(15px * var(--tw-space-y-reverse));
 }
 
 .self-center {
@@ -1341,11 +1382,11 @@ video {
 }
 
 .font-body {
-  font-family: "ITC Franklin Gothic LT", sans-serif;
+  font-family: "ITC Franklin Gothic LT";
 }
 
 .font-title {
-  font-family: "ITC Benguiat Condensed Bold", serif;
+  font-family: "Sunborn", sans-serif;
 }
 
 .text-\[12px\] {
@@ -1459,7 +1500,7 @@ video {
 
 .text-brand-red {
   --tw-text-opacity: 1;
-  color: rgb(245 104 58 / var(--tw-text-opacity, 1));
+  color: rgb(248 62 2 / var(--tw-text-opacity, 1));
 }
 
 .text-white {
@@ -1772,8 +1813,8 @@ video {
     margin-bottom: 50px;
   }
 
-  .md\:ml-\[40\%\] {
-    margin-left: 40%;
+  .md\:ml-\[150px\] {
+    margin-left: 150px;
   }
 
   .md\:mt-\[20px\] {
@@ -1931,12 +1972,8 @@ video {
     font-size: 110px;
   }
 
-  .md\:text-\[138\%\] {
-    font-size: 138%;
-  }
-
-  .md\:text-\[140\%\] {
-    font-size: 140%;
+  .md\:text-\[130\%\] {
+    font-size: 130%;
   }
 
   .md\:text-\[16px\] {
@@ -1957,6 +1994,10 @@ video {
 
   .md\:text-\[24px\] {
     font-size: 24px;
+  }
+
+  .md\:text-\[35px\] {
+    font-size: 35px;
   }
 
   .md\:text-\[40px\] {
