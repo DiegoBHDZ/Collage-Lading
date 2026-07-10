@@ -8,197 +8,170 @@
 </head>
 <body class="bg-brand-dark overflow-x-hidden text-brand-dark">
 
-  <header class="absolute top-[0px] left-[0px] w-full flex justify-center items-start gap-[64px] md:gap-[128px] px-[40px] py-[32px] z-[50]">
+<section id="section-1" class="relative w-full bg-brand-dark flex justify-center items-start overflow-visible pt-[0%]">
+  
+  <div class="relative w-full max-w-[1440px] aspect-video z-[10]">
     
-    <a href="#contact" aria-label="Ir a la sección de Contacto" class="block hover:scale-110 transition-transform duration-200 cursor-pointer mt-[8px]">
-      <img src="src/assets/section-1/contact.png" alt="Contact" class="h-[47px] md:h-[55px] w-auto transform scale-150 drop-shadow-md">
-    </a>
+    <div class="absolute inset-0 bg-[url('../assets/section-1/fondo-section-1.svg')] bg-cover bg-center overflow-hidden z-[1]">
+      
+      <header class="absolute top-[4%] left-0 w-full flex justify-center gap-[10%] items-start px-[5%] z-[50]">
+        <a href="#contact" class="w-[18%] max-w-[160px] hover:scale-110 transition-transform cursor-pointer">
+          <img src="src/assets/section-1/contact.png" alt="Contact" class="w-full h-auto drop-shadow-md">
+        </a>
 
-    <a href="#" class="flex flex-col items-center justify-center hover:opacity-80 transition-opacity duration-200">
-      <span class="text-brand-red font-title font-black tracking-tighter text-[36px] md:text-[48px] tracking-wide leading-none drop-shadow-md">JEANNE</span>
-      <span class="text-brand-red font-title font-black tracking-tighter text-[36px] md:text-[48px] tracking-wide leading-none drop-shadow-md">RIGAL</span>
-    </a>
+        <a href="#" class="flex flex-col items-center justify-center hover:opacity-80 transition-opacity">
+          <span class="text-brand-red font-title font-black tracking-tighter text-[4vw] max-[1440px]:xl:text-[55px] leading-none drop-shadow-md">JEANNE</span>
+          <span class="text-brand-red font-title font-black tracking-tighter text-[4vw] max-[1440px]:xl:text-[55px] leading-none drop-shadow-md">RIGAL</span>
+        </a>
 
-    <a href="#services" aria-label="Ir a la sección de Servicios" class="block hover:scale-110 transition-transform duration-200 cursor-pointer mt-[8px]">
-      <img src="src/assets/section-1/services.png" alt="Services" class="h-[32px] md:h-[40px] w-auto transform scale-150 drop-shadow-md">
-    </a>
+        <a href="#services" class="w-[18%] max-w-[160px] hover:scale-110 transition-transform cursor-pointer">
+          <img src="src/assets/section-1/services.png" alt="Services" class="w-full h-auto drop-shadow-md">
+        </a>
+      </header>
 
-  </header>
+      <img src="src/assets/section-1/edificio_section1.svg" alt="Edificio" class="absolute bottom-[-1%] left-[2%] w-[57%] z-[2] drop-shadow-xl pointer-events-none">
 
-  <!-- ================= SECCIÓN 1: HERO ================= -->
-  <section id="section-1" class="relative z-[10] w-full h-screen bg-[url('../assets/section-1/fondo-section-1.svg')] bg-cover bg-center bg-no-repeat">
-    
-    
-    
-    <!-- TÍTULO: MEET ME -->
-    <!-- z-[30] asegura que esté por encima del estuche -->
-    <h1 class="absolute top-[120px] md:top-[23%] left-[24px] md:left-[48px] text-brand-red font-title tracking-tighter text-[70px] md:text-[550%] leading-none tracking-tight z-[30] drop-shadow-md pointer-events-none">
+      <img src="src/assets/section-1/ojos_section1.svg" alt="Ojos Dorados" class="absolute top-[18%] right-[18%] w-[15%] z-[5] drop-shadow-md animate-[pulse_4s_ease-in-out_infinite]">
+      
+      <img src="src/assets/section-1/cuadro_section1.svg" alt="Cuadro" class="absolute top-[48%] right-[15%] w-[20%] z-[12] drop-shadow-md -rotate-6">
+      
+      <img src="src/assets/section-1/mujer_section1.png" alt="Mujer" class="absolute -bottom-[14%] -right-[3%] w-[25%] z-[15] drop-shadow-xl">
+
+    </div> 
+    <h1 class="absolute top-[25%] left-[7%] text-brand-red font-title text-[9vw] max-[1440px]:xl:text-[90px] leading-none z-[30] drop-shadow-md pointer-events-none">
       MEET ME
     </h1>
-    
-    <!-- ================= 1. EDIFICIO (Capa Inferior) ================= -->
-    <img src="src/assets/section-1/edificio_section1.svg" alt="Edificio" class="absolute bottom-[0px] left-[0px] md:left-[8px] w-[45%] md:w-[50%] max-w-[850px] z-[2] drop-shadow-xl">
 
-    <!-- ================= 2. ESTRELLAS (Capa Media) ================= -->
-    <!-- z-[15] las pone encima del edificio (10) pero debajo del estuche (20) -->
-    <img src="src/assets/section-1/estrellas_section1.svg" alt="Estrellas" class="absolute bottom-[-128px] left-[16px] md:bottom-[-128px] w-[45%] md:w-[30%] max-w-[300px] z-[3] pointer-events-none drop-shadow-md">
+    <img src="src/assets/section-1/estrellas_section1.svg" alt="Estrellas" class="absolute bottom-[-15%] left-[2%] w-[28%] z-[4] drop-shadow-md pointer-events-none">
 
-    <!-- ================= CONTENEDOR DEL ESTUCHE GRIS (Capa Superior) ================= -->
-    <div class="absolute top-[-8%] md:top-[-8%] left-[10%] md:left-[14%] z-[6] w-[90%] max-w-[38%]">
-      
-      <!-- Fondo del estuche gris -->
+    <div class="absolute -top-[7%] left-[18%] z-[6] w-[43%]">
       <img src="src/assets/section-1/lienzo_gris.svg" alt="Lienzo Gris" class="w-full h-auto drop-shadow-2xl relative z-[10]">
-      
-      <!-- Sombra interna del estuche -->
-      <!-- z-[15] la coloca sobre el lienzo gris pero debajo de los textos -->
-      <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[28%] left-[0px] w-full h-auto z-[15] pointer-events-none">
+      <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[28%] left-0 w-full h-auto z-[15] pointer-events-none">
+      <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[58%] left-0 w-full h-auto z-[15] pointer-events-none">
 
-      <!-- Sombra 2 interna del estuche -->
-      <!-- z-[15] la coloca sobre el lienzo gris pero debajo de los textos -->
-      <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[58%] left-[0px] w-full h-auto z-[15] pointer-events-none">
-
-
-      <!-- Textos -->
-      <!-- z-[20] los mantiene legibles por encima de la sombra -->
-      <div class="absolute inset-0 z-[20] text-white font-body font-bold text-[16px] md:text-[130%] leading-snug text-left">
-        <div class="absolute top-[40%] bottom-[52%] left-[25%] right-[10%] flex items-center">
-          <p>
-            Helping brands,<br>
-            organizations, and cultural<br>
-            projects tell their story,
-          </p>
-        </div>
-        <div class="absolute top-[53%] bottom-[10%] left-[25%] right-[10%] flex items-center">
-          <p>
-            & build meaningful<br>
-            connections, to grow<br>
-            their impact through<br>
-            content, media, and<br>
-            community.
-          </p>
-        </div>
+      <div class="absolute top-[18%] inset-0 z-[21] text-white font-body font-bold text-[clamp(15px,1.6vw,24px)] leading-snug flex flex-col justify-center gap-[22%] px-[22%] py-[12%]">
+        <p>Helping brands,<br>organizations, and cultural<br>projects tell their story,</p>
+        <p>& build meaningful<br>connections, to grow<br>their impact through<br>content, media, and<br>community.</p>
       </div>
     </div>
 
-<!-- ================= OJOS DORADOS ================= -->
-    <!-- Agregamos animate-[pulse_4s_ease-in-out_infinite] para un latido lento -->
-    <img src="src/assets/section-1/ojos_section1.svg" alt="Ojos Dorados" class="absolute top-[80px] md:top-[15%] right-[10%] md:right-[12%] w-[120px] md:w-[14%] z-[5] drop-shadow-md pointer-events-none animate-[pulse_4s_ease-in-out_infinite]">
-    <!-- ============= Cuadro lado derecho ========== -->
-    <img src="src/assets/section-1/cuadro_section1.svg" alt="Cuadro" class="absolute top-[450px] md:top-[45%] right-[10%] md:right-[8%] w-[120px] md:w-[20%] z-[2] drop-shadow-md pointer-events-none">
+    <img src="src/assets/section-1/ojitos_entre_section.svg" alt="Ojos" class="absolute bottom-[-15%] right-[9%] w-[20%] z-[25] drop-shadow-lg transition-transform hover:scale-110 cursor-pointer">
     
-    <!-- ================= MUJER (Lado Derecho con Recorte Independiente) ================= -->
-    <!-- Este div (la caja invisible) cubre toda la sección (inset-0) y TIENE overflow-hidden -->
-    <!-- z-[30] mantiene la capa en su lugar, pointer-events-none evita que esta caja invisible bloquee clics -->
-    <div class="absolute inset-0 overflow-hidden z-[3] pointer-events-none">
-      
-      <!-- La imagen de la mujer adentro. Si la bajas con valores negativos (ej. -bottom-[50px]), se cortará a la perfección -->
-      <img src="src/assets/section-1/mujer_section1.png" alt="Mujer" class="absolute -bottom-[20%] right-[0px] md:-right-[100px] w-[250px] md:w-[23%] drop-shadow-xl z-[41]">
-      
-    </div>
-
-    <!-- ================= OJOS ENTRE SECCIÓN (Abajo a la derecha) ================= -->
-    <!-- z-[40] asegura que sobrepasen el corte hacia la sección 2 -->
-    <img src="src/assets/section-1/ojitos_entre_section.svg" alt="Ojos" class="absolute bottom-[-10%] md:bottom-[-15%] right-[120px] md:right-[90px] w-[35%] md:w-[25%] max-w-[15%] z-[6] drop-shadow-lg transition-transform hover:scale-110 cursor-pointer">
-    
-  </section>
+  </div>
+</section>
 
 <!-- ================= SECCIÓN 2 ================= -->
-  <section id="section-2" class="relative z-[0] w-full h-screen bg-[url('../assets/section-2/fondo-section-2.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
+<section id="section-2" class="relative z-[0] w-full bg-brand-dark flex justify-center items-start overflow-visible pt-[0%]">
+  
+  <div class="relative w-full max-w-[1440px] aspect-video z-[10]">
     
-    <!-- Capa Oscura (Nivel 4) -->
-    <div class="absolute inset-0 bg-black/40 z-[2] pointer-events-none"></div>
-
-    <!-- ================= 1. GUEST CHECK ================= -->
-    <div class="absolute top-[0px] left-[0px] w-[100%] md:w-[50%] h-full">
+    <div class="absolute inset-0 bg-[url('../assets/section-2/fondo-section-2.png')] bg-cover bg-center overflow-hidden z-[1]">
       
-      <!-- Fondo del ticket -->
-      <img src="src/assets/section-2/guest_section2.svg" alt="Guest" class="h-full w-auto object-contain object-left-top relative z-[2] drop-shadow-md pointer-events-none">
+      <div class="absolute inset-0 bg-black/40 z-[2] pointer-events-none"></div>
 
-      <!-- ================= TEXTOS 100% INDEPENDIENTES ================= -->
-      <!-- Z-[5] para brillar sobre la capa oscura -->
-      <div class="absolute inset-0 z-[5] text-brand-red font-body font-black tracking-widest">
+      <div class="absolute top-0 left-0 h-full z-[3]">
         
-        <!-- Bloque 1: VISUAL DESIGN -->
-        <h3 class="absolute top-[550px] md:top-[34%] left-[10%] md:left-[15%] text-[20px] md:text-[24px] leading-none">VISUAL DESIGN :</h3>
-        <p class="absolute top-[300px] md:top-[42%] left-[15%] md:left-[20%] pl-[20px] text-[14px] md:text-[16px] leading-none">ADOBE SUITE (PHOTOSHOP). CANVA PRO</p>
+        <img src="src/assets/section-2/guest_section2.svg" alt="Guest" class="h-full w-auto relative z-[2] drop-shadow-md pointer-events-none">
 
-        <!-- Bloque 2: EMAIL MARKETING -->
-        <h3 class="absolute top-[280px] md:top-[48%] left-[10%] md:left-[15%] text-[20px] md:text-[24px] leading-none">EMAIL MARKETING :</h3>
-        <p class="absolute top-[305px] md:top-[56%] left-[15%] md:left-[20%] pl-[20px] text-[14px] md:text-[16px] leading-none">MAILJET. BREVO. GET RESPONSE</p>
+        <div class="absolute inset-0 z-[5] text-brand-red font-body font-black tracking-widest">
+          
+          <h3 class="absolute top-[34%] left-[15%] text-[clamp(18px,1.5vw,24px)] leading-none">VISUAL DESIGN :</h3>
+          <p class="absolute top-[40%] left-[20%] text-[clamp(14px,1vw,16px)] leading-none">ADOBE SUITE (PHOTOSHOP). CANVA PRO</p>
 
-        <!-- Bloque 3: WEBSITE CREATION -->
-        <h3 class="absolute top-[360px] md:top-[62%] left-[10%] md:left-[15%] text-[20px] md:text-[24px] leading-none">WEBSITE CREATION :</h3>
-        <p class="absolute top-[385px] md:top-[70%] left-[15%] md:left-[20%] pl-[20px] text-[14px] md:text-[16px] leading-none">WIX. JIMDO. SHOPIFY</p>
+          <h3 class="absolute top-[48%] left-[15%] text-[clamp(18px,1.5vw,24px)] leading-none">EMAIL MARKETING :</h3>
+          <p class="absolute top-[54%] left-[20%] text-[clamp(14px,1vw,16px)] leading-none">MAILJET. BREVO. GET RESPONSE</p>
 
-        <!-- Bloque 4: VIDEO EDITING -->
-        <h3 class="absolute top-[440px] md:top-[76%] left-[10%] md:left-[15%] text-[20px] md:text-[24px] leading-none">VIDEO EDITING :</h3>
-        <p class="absolute top-[465px] md:top-[83%] left-[15%] md:left-[20%] pl-[20px] text-[14px] md:text-[16px] leading-none">PREMIERE PRO</p>
+          <h3 class="absolute top-[62%] left-[15%] text-[clamp(18px,1.5vw,24px)] leading-none">WEBSITE CREATION :</h3>
+          <p class="absolute top-[68%] left-[20%] text-[clamp(14px,1vw,16px)] leading-none">WIX. JIMDO. SHOPIFY</p>
 
-        <!-- Bloque 5: MEDIA MONITORING -->
-        <h3 class="absolute top-[520px] md:top-[90%] left-[10%] md:left-[15%] text-[20px] md:text-[24px] leading-none">MEDIA MONITORING :</h3>
-        <p class="absolute top-[545px] md:top-[97%] left-[15%] md:left-[20%] pl-[20px] text-[14px] md:text-[16px] leading-none">ONCLUSIVE. CISION</p>
+          <h3 class="absolute top-[76%] left-[15%] text-[clamp(18px,1.5vw,24px)] leading-none">VIDEO EDITING :</h3>
+          <p class="absolute top-[82%] left-[20%] text-[clamp(14px,1vw,16px)] leading-none">PREMIERE PRO</p>
 
+          <h3 class="absolute top-[90%] left-[15%] text-[clamp(18px,1.5vw,24px)] leading-none">MEDIA MONITORING :</h3>
+          <p class="absolute top-[96%] left-[20%] text-[clamp(14px,1vw,16px)] leading-none">ONCLUSIVE. CISION</p>
+
+        </div>
       </div>
-    </div>
 
-    <!-- ================= 2. TÍTULO: TOOLS & SKILLS (Derecha) ================= -->
-    <div class="absolute top-[20%] md:top-[25%] right-[5%] md:right-[8%] z-[5] flex flex-col items-end">
-      <h2 class="text-brand-red font-title font-black tracking-tighter text-[50px] md:text-[80px] leading-none drop-shadow-md">TOOLS &</h2>
-      <h2 class="text-brand-red font-title font-black tracking-tighter text-[60px] md:text-[95px] leading-none drop-shadow-md -mt-[5px] md:-mt-[15px]">SKILLS</h2>
-    </div>
+      <div class="absolute top-[25%] right-[8%] z-[5] flex flex-col items-end pointer-events-none">
+        <h2 class="text-brand-red font-title font-black tracking-tighter text-[5.5vw] max-[1440px]:xl:text-[80px] leading-none drop-shadow-md">TOOLS &</h2>
+        <h2 class="text-brand-red font-title font-black tracking-tighter text-[6.5vw] max-[1440px]:xl:text-[95px] leading-none drop-shadow-md -mt-[2%]">SKILLS</h2>
+      </div>
 
-<!-- ================= 3. AUTO (Abajo a la derecha) ================= -->
-    <!-- Quitamos pointer-events-none y agregamos una transición de movimiento lateral (-translate-x-6) al hacer hover -->
-    <img src="src/assets/section-2/auto_section2.svg" alt="Auto" class="absolute bottom-[2px] md:-bottom-[5px] right-[-80px] md:right-[-50px] w-[70%] md:w-[40%] max-w-[650px] z-[1] drop-shadow-xl transition-transform duration-500 ease-out hover:-translate-x-6 hover:scale-105 cursor-pointer">
+    </div> 
+    <img src="src/assets/section-2/auto_section2.svg" alt="Auto" class="absolute bottom-[-1%] right-[-4%] w-[40%] z-[15] drop-shadow-xl transition-transform duration-500 ease-out hover:-translate-x-6 hover:scale-105 cursor-pointer">
     
-  </section>
+  </div>
+</section>
+
 
 <!-- ================= SECCIÓN 3 ================= -->
- <section id="section-3" class="relative z-[0] w-full min-h-screen bg-[url('../assets/section-3/fondo_section3.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
+<section id="section-3" class="relative z-[0] w-full bg-brand-dark flex justify-center items-start overflow-visible pt-[0%]">
+  
+  <!-- CHASIS PROTEGIDO (16:9) -->
+  <div class="relative w-full max-w-[1440px] aspect-video z-[10]">
+    
+    <!-- ================= 1. MÁSCARA INTERNA ================= -->
+    <div class="absolute inset-0 bg-[url('../assets/section-3/fondo_section3.png')] bg-cover bg-center overflow-hidden z-[1]">
+      
+      <!-- Revista / Periódico (Lado Derecho) -->
+      <div class="absolute top-[0px] right-[0px] z-[1] w-[50%] h-full">
+        <img src="src/assets/section-3/periodico_section3.svg" alt="Revista" class="w-full h-full object-cover object-top pointer-events-none">
+      </div>
+      
+      <!-- Capa Oscura (Nivel 2) -->
+      <div class="absolute inset-0 bg-black/40 z-[2] pointer-events-none"></div>
 
-    <div class="absolute top-[0px] right-[0px] z-[1] hidden md:block w-[50%] h-full">
-      <img src="src/assets/section-3/periodico_section3.svg" alt="Revista" class="w-full h-full object-cover object-top pointer-events-none">
-    </div>
-    <div class="absolute inset-0 bg-black/40 z-[2] pointer-events-none"></div>
-
-    <div class="relative w-full max-w-[1440px] mx-auto min-h-screen h-full pointer-events-none z-[3]">
-
-      <div class="absolute top-[8%] md:top-[10%] left-[5%] md:left-[8%] w-[90%] md:w-[45%] max-w-[600px] pointer-events-auto">
+      <!-- TEXTOS: ABOUT ME & EDUCATION -->
+      <div class="absolute top-[10%] left-[8%] w-[45%] z-[3] pointer-events-auto">
         
-        <div class="text-brand-red font-title font-black tracking-tighter leading-[0.8] mb-[30px] md:mb-[50px] drop-shadow-md">
-          <h2 class="text-[70px] md:text-[110px]">ABOUT</h2>
-          <h2 class="text-[70px] md:text-[110px] ml-[80px] md:ml-[150px]">ME</h2>
+        <!-- Título ABOUT ME con porcentajes y espaciado proporcional (ml-[10vw]) -->
+        <div class="text-brand-red font-title font-black tracking-tighter leading-[0.8] mb-[6%] drop-shadow-md">
+          <h2 class="text-[7.5vw] max-[1440px]:xl:text-[110px]">ABOUT</h2>
+          <h2 class="text-[7.5vw] max-[1440px]:xl:text-[110px] ml-[18vw]">ME</h2>
         </div>
 
-        <div class="text-dark font-body space-y-[15px]">
-          <h3 class="text-brand-red font-title font-black tracking-tighter text-[35px] md:text-[35px] tracking-wide leading-none mb-[16px] drop-shadow-sm">EDUCATION</h3>
+        <div class="text-dark font-body  space-y-[2%]">
+          <!-- Título Education protegido con clamp -->
+          <h3 class="text-brand-red font-title font-black tracking-tighter text-[clamp(25px,2.5vw,35px)] tracking-wide leading-none mb-[2%] drop-shadow-sm">EDUCATION</h3>
           
           <div>
-            <p class="font-body font-black tracking-tighter text-[16px] md:text-[130%] leading-snug">CELSA – SORBONNE UNIVERSITÉ</p>
-            <p class="text-[14px] md:text-[100%] leading-snug">2025–2027</p>
-            <p class="text-[14px] md:text-[100%] leading-snug">Master's in Consulting, Management & Media – Creative & Cultural Industries</p>
+            <p class="font-body font-black tracking-tighter text-[clamp(17px,1.5vw,25px)] leading-snug">CELSA – SORBONNE UNIVERSITÉ</p>
+            <p class="text-[clamp(15px,1.3vw,20px)] leading-snug">2025–2027</p>
+            <p class="text-[clamp(15px,1.3vw,16px)] leading-snug">Master's in Consulting, Management &</p>
+            <p class="text-[clamp(15px,1.3vw,16px)] leading-snug">Media – Creative & Cultural Industries</p>
           </div>
 
           <div>
-            <p class="font-body font-black tracking-tighter text-[16px] md:text-[130%] leading-snug">UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO (UNAM)</p>
-            <p class="text-[14px] md:text-[100%] leading-snug">2024–2025</p>
-            <p class="text-[14px] md:text-[100%] leading-snug">Coursework : Marketing & Media Theory</p>
+            <p class="font-body font-black tracking-tighter text-[clamp(17px,1.5vw,25px)] leading-snug">UNIVERSIDAD NACIONAL AUTÓNOMA DE</p>
+             <p class="font-body font-black tracking-tighter text-[clamp(17px,1.5vw,25px)] leading-snug">MÉXICO (UNAM)</p>
+            <p class="text-[clamp(15px,1.3vw,20px)] leading-snug">2024–2025</p>
+            <p class="text-[clamp(15px,1.3vw,16px)] leading-snug">Coursework : Marketing & Media Theory</p>
           </div>
 
           <div>
-            <p class="font-body font-black tracking-tighter text-[16px] md:text-[130%] leading-snug">UNIVERSITÉ PARIS 1 PANTHÉON SORBONNE</p>
-            <p class="text-[14px] md:text-[100%] leading-snug">2020–2023</p>
-            <p class="text-[14px] md:text-[100%] leading-snug">Double Bachelor's – Law & Economics</p>
+            <p class="font-body font-black tracking-tighter text-[clamp(17px,1.5vw,25px)] leading-snug">UNIVERSITÉ PARIS 1 PANTHÉON</p>
+             <p class="font-body font-black tracking-tighter text-[clamp(17px,1.5vw,25px)] leading-snug">SORBONNE</p>
+            <p class="text-[clamp(15px,1.3vw,20px)] leading-snug">2020–2023</p>
+            <p class="text-[clamp(15px,1.3vw,16px)] leading-snug">Double Bachelor's – Law & Economics</p>
           </div>
         </div>
       </div>
 
-      <img src="src/assets/section-3/Galletas_mitad_section3.svg" alt="Galletas" class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[85%] w-auto z-[4] drop-shadow-xl transition-transform duration-700 hover:rotate-180 cursor-pointer pointer-events-auto">
+    </div> 
+    <!-- ================= FIN DE LA MÁSCARA INTERNA ================= -->
 
-      <img src="src/assets/section-3/gorra_section3.svg" alt="Gorra" class="absolute top-[21%] right-[13%] w-[120px] md:w-[15%] max-w-[200px] z-[5] drop-shadow-2xl cursor-move transition-transform hover:scale-105 pointer-events-auto">
 
-    </div>
-  </section>
+    <!-- ================= 2. ELEMENTOS LIBRES ================= -->
+    <!-- GALLETAS (Centro) -->
+    <!-- Mantenemos su altura en h-[85%] para que respete el lienzo vectorizado -->
+    <img src="src/assets/section-3/Galletas_mitad_section3.svg" alt="Galletas" class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[85%] w-auto z-[4] drop-shadow-xl transition-transform duration-700 hover:rotate-180 cursor-pointer pointer-events-auto">
+
+    <!-- GORRA (Derecha arriba) -->
+    <img src="src/assets/section-3/gorra_section3.svg" alt="Gorra" class="absolute top-[21%] right-[13%] w-[15%] z-[5] drop-shadow-2xl cursor-move transition-transform hover:scale-105 pointer-events-auto">
+
+  </div>
+</section>
 
 
 <!-- ================= SECCIÓN 4 ================= -->
