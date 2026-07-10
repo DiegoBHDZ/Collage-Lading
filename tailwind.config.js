@@ -15,7 +15,7 @@ module.exports = {
         // Títulos
         'title': ['"Sunborn"', 'sans-serif'],
         // Texto principal
-        'body': ['"ITC Franklin Gothic LT"',],
+        'body': ['"ITC Franklin Gothic LT"', 'sans-serif'],
       }
     },
   },
