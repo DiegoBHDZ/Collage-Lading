@@ -592,10 +592,6 @@ video {
   position: relative;
 }
 
-.sticky {
-  position: sticky;
-}
-
 .inset-0 {
   inset: 0px;
 }
@@ -840,6 +836,10 @@ video {
   top: 96%;
 }
 
+.isolate {
+  isolation: isolate;
+}
+
 .z-\[0\] {
   z-index: 0;
 }
@@ -967,10 +967,6 @@ video {
 
 .h-\[25vh\] {
   height: 25vh;
-}
-
-.h-\[400vh\] {
-  height: 400vh;
 }
 
 .h-\[50px\] {
@@ -1174,6 +1170,10 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.transform-gpu {
+  transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 @keyframes pulse {
   50% {
     opacity: .5;
@@ -1272,6 +1272,10 @@ video {
 .bg-brand-light {
   --tw-bg-opacity: 1;
   background-color: rgb(253 231 207 / var(--tw-bg-opacity, 1));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-\[url\(\'\.\.\/assets\/section-1\/fondo-section-1\.svg\'\)\] {
@@ -1491,6 +1495,11 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .drop-shadow-2xl {
   --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1552,6 +1561,10 @@ video {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.\[-webkit-mask-image\:linear-gradient\(white\2c white\)\] {
+  -webkit-mask-image: linear-gradient(white,white);
 }
 
 .hover\:z-\[5\]:hover {
