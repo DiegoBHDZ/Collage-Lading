@@ -16,24 +16,6 @@
     <div class="absolute inset-0 bg-[url('../assets/section-1/fondo-section-1.svg')] bg-cover bg-center overflow-hidden z-[1]">
 
       <div class="absolute inset-0 bg-black/40 z-[1] pointer-events-none"></div>
-      
-      <header class="absolute top-[4%] left-0 w-full flex justify-center gap-[10%] items-start px-[5%] z-[50]">
-        
-        <!-- BOTÓN CONTACT: Se añadió transition-all, duration-200, active:scale-90 y active:translate-y-2 -->
-        <a href="#contact" class="w-[18%] max-w-[160px] cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2">
-          <img src="src/assets/section-1/contact.png" alt="Contact" class="w-full h-auto drop-shadow-md">
-        </a>
-
-        <a href="#" class="flex flex-col items-center justify-center hover:opacity-80 transition-opacity">
-          <span class="text-brand-red font-title font-black tracking-tighter text-[4vw] max-[1440px]:xl:text-[55px] leading-none drop-shadow-md">JEANNE</span>
-          <span class="text-brand-red font-title font-black tracking-tighter text-[4vw] max-[1440px]:xl:text-[55px] leading-none drop-shadow-md">RIGAL</span>
-        </a>
-
-        <!-- BOTÓN SERVICES: Se añadió transition-all, duration-200, active:scale-90 y active:translate-y-2 -->
-        <a href="#services" class="w-[18%] max-w-[160px] cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2">
-          <img src="src/assets/section-1/services.png" alt="Services" class="w-full h-auto drop-shadow-md">
-        </a>
-      </header>
 
       <img src="src/assets/section-1/edificio_section1.svg" alt="Edificio" class="absolute bottom-[-1%] left-[2%] w-[57%] z-[2] drop-shadow-xl pointer-events-none">
 
@@ -44,7 +26,28 @@
       
       <img src="src/assets/section-1/mujer_section1.png" alt="Mujer" class="absolute -bottom-[14%] -right-[9%] w-[25%] z-[15] drop-shadow-xl">
 
-    </div> 
+    </div>
+    
+    <header class="absolute top-[4%] left-0 w-full flex justify-center gap-[10%] items-center px-[5%] z-[50]">
+        
+        <!-- BOTÓN CONTACT -->
+        <a href="#contact" class="w-[18%] max-w-[160px] flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 -mt-[30px]">
+          <img src="src/assets/section-1/contact.png" alt="Contact" class="w-full h-auto object-contain drop-shadow-md">
+        </a>
+
+        <!-- LOGO CENTRAL -->
+        <a href="#" class="flex flex-col items-center justify-center hover:opacity-80 transition-opacity shrink-0">
+          <span class="text-brand-red font-title font-black tracking-tighter text-[4vw] max-[1440px]:xl:text-[55px] leading-none drop-shadow-md">JEANNE</span>
+          <span class="text-brand-red font-title font-black tracking-tighter text-[4vw] max-[1440px]:xl:text-[55px] leading-none drop-shadow-md">RIGAL</span>
+        </a>
+
+        <!-- BOTÓN SERVICES -->
+        <a href="#services" class="w-[19%] max-w-[165px] flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 -mt-[30px]">
+          <img src="src/assets/section-1/services.png" alt="Services" class="w-full h-auto object-contain drop-shadow-md">
+        </a>
+      </header>
+
+
     <h1 class="absolute top-[25%] left-[7%] text-brand-red font-title text-[9vw] max-[1440px]:xl:text-[90px] leading-none z-[30] drop-shadow-md pointer-events-none">
       MEET ME
     </h1>
@@ -58,10 +61,10 @@
 
       <!-- CAJA DE TEXTO CORREGIDA -->
       <!-- Definimos límites exactos (top/bottom/left/right) y usamos justify-between -->
-      <div class="absolute top-[39%] bottom-[20%] left-[30%] right-[15%] z-[21] text-brand-light font-body font-bold text-[clamp(12px,1.6vw,24px)] leading-tight flex flex-col justify-between">
+      <div class="absolute top-[39%] bottom-[20%] left-[30%] right-[9%] z-[21] text-brand-light font-body font-bold text-[clamp(13px,1.7vw,24px)] leading-tight flex flex-col justify-between">
         <p>Helping brands,<br>organizations, and cultural<br>projects tell their story.</p>
       </div>
-      <div class="absolute top-[65%] bottom-[20%] left-[30%] right-[15%] z-[21] text-brand-light font-body font-bold text-[clamp(12px,1.6vw,24px)] leading-tight flex flex-col justify-between">
+      <div class="absolute top-[63%] bottom-[20%] left-[30%] right-[9%] z-[21] text-brand-light font-body font-bold text-[clamp(13px,1.7vw,24px)] leading-tight flex flex-col justify-between">
         <p>& build meaningful<br>connections, to grow<br>their impact through<br>content, media, and<br>community.</p>
       </div>
     </div>

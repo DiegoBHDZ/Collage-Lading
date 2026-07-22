@@ -660,8 +660,8 @@ video {
   left: 20%;
 }
 
-.left-\[23\%\] {
-  left: 23%;
+.left-\[30\%\] {
+  left: 30%;
 }
 
 .left-\[35\%\] {
@@ -708,10 +708,6 @@ video {
   right: 13%;
 }
 
-.right-\[22\%\] {
-  right: 22%;
-}
-
 .right-\[25\%\] {
   right: 25%;
 }
@@ -726,6 +722,10 @@ video {
 
 .right-\[8\%\] {
   right: 8%;
+}
+
+.right-\[9\%\] {
+  right: 9%;
 }
 
 .top-0 {
@@ -784,6 +784,10 @@ video {
   top: 48%;
 }
 
+.top-\[5\%\] {
+  top: 5%;
+}
+
 .top-\[50\%\] {
   top: 50%;
 }
@@ -806,6 +810,10 @@ video {
 
 .top-\[62\%\] {
   top: 62%;
+}
+
+.top-\[63\%\] {
+  top: 63%;
 }
 
 .top-\[65\%\] {
@@ -834,30 +842,6 @@ video {
 
 .top-\[96\%\] {
   top: 96%;
-}
-
-.left-\[30\%\] {
-  left: 30%;
-}
-
-.right-\[20\%\] {
-  right: 20%;
-}
-
-.right-\[15\%\] {
-  right: 15%;
-}
-
-.top-\[9\%\] {
-  top: 9%;
-}
-
-.top-\[7\%\] {
-  top: 7%;
-}
-
-.top-\[5\%\] {
-  top: 5%;
 }
 
 .isolate {
@@ -971,6 +955,10 @@ video {
 
 .mt-\[70px\] {
   margin-top: 70px;
+}
+
+.-mt-\[30px\] {
+  margin-top: -30px;
 }
 
 .flex {
@@ -1113,6 +1101,10 @@ video {
   width: 100%;
 }
 
+.w-\[19\%\] {
+  width: 19%;
+}
+
 .max-w-\[1440px\] {
   max-width: 1440px;
 }
@@ -1139,6 +1131,14 @@ video {
 
 .max-w-\[450px\] {
   max-width: 450px;
+}
+
+.max-w-\[165px\] {
+  max-width: 165px;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
 }
 
 .grow {
@@ -1256,12 +1256,6 @@ video {
 
 .gap-\[15px\] {
   gap: 15px;
-}
-
-.space-y-\[2\%\] > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2% * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2% * var(--tw-space-y-reverse));
 }
 
 .space-y-\[1\%\] > :not([hidden]) ~ :not([hidden]) {
@@ -1424,80 +1418,32 @@ video {
   font-size: 65px;
 }
 
-.text-\[7\.5vw\] {
-  font-size: 7.5vw;
-}
-
 .text-\[9vw\] {
   font-size: 9vw;
 }
 
-.text-\[clamp\(12px\2c 1\.6vw\2c 24px\)\] {
-  font-size: clamp(12px, 1.6vw, 24px);
-}
-
-.text-\[clamp\(15px\2c 1\.3vw\2c 20px\)\] {
-  font-size: clamp(15px, 1.3vw, 20px);
-}
-
-.text-\[clamp\(15px\2c 1vw\2c 20px\)\] {
-  font-size: clamp(15px, 1vw, 20px);
-}
-
-.text-\[clamp\(17px\2c 1\.5vw\2c 25px\)\] {
-  font-size: clamp(17px, 1.5vw, 25px);
-}
-
-.text-\[clamp\(20px\2c 1\.5vw\2c 25px\)\] {
-  font-size: clamp(20px, 1.5vw, 25px);
-}
-
-.text-\[clamp\(25px\2c 2\.5vw\2c 35px\)\] {
-  font-size: clamp(25px, 2.5vw, 35px);
-}
-
-.text-\[clamp\(20px\2c 2vw\2c 25px\)\] {
-  font-size: clamp(20px, 2vw, 25px);
+.text-\[clamp\(13px\2c 1\.7vw\2c 24px\)\] {
+  font-size: clamp(13px, 1.7vw, 24px);
 }
 
 .text-\[clamp\(15px\2c 1\.5vw\2c 20px\)\] {
   font-size: clamp(15px, 1.5vw, 20px);
 }
 
-.text-\[8vw\] {
-  font-size: 8vw;
-}
-
-.text-\[50vw\] {
-  font-size: 50vw;
-}
-
-.text-\[clamp\(25px\2c 3vw\2c 35px\)\] {
-  font-size: clamp(25px, 3vw, 35px);
-}
-
-.text-\[clamp\(25px\2c 7vw\2c 35px\)\] {
-  font-size: clamp(25px, 7vw, 35px);
-}
-
-.text-\[clamp\(25px\2c 5vw\2c 35px\)\] {
-  font-size: clamp(25px, 5vw, 35px);
+.text-\[clamp\(15px\2c 1\.6vw\2c 20px\)\] {
+  font-size: clamp(15px, 1.6vw, 20px);
 }
 
 .text-\[clamp\(17px\2c 2vw\2c 25px\)\] {
   font-size: clamp(17px, 2vw, 25px);
 }
 
+.text-\[clamp\(20px\2c 2vw\2c 25px\)\] {
+  font-size: clamp(20px, 2vw, 25px);
+}
+
 .text-\[clamp\(25px\2c 4vw\2c 35px\)\] {
   font-size: clamp(25px, 4vw, 35px);
-}
-
-.text-\[clamp\(15px\2c 1\.7vw\2c 20px\)\] {
-  font-size: clamp(15px, 1.7vw, 20px);
-}
-
-.text-\[clamp\(15px\2c 1\.6vw\2c 20px\)\] {
-  font-size: clamp(15px, 1.6vw, 20px);
 }
 
 .font-black {
