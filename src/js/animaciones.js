@@ -1,8 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   // === SELECTORES ===
   const section4 = document.getElementById("section-4");
+  
+  // Carrusel 4 (Desktop)
   const carouselContainer4 = document.getElementById("carousel-container-4");
-  const cards4 = section4 ? section4.querySelectorAll(".carousel-card") : [];
+  const cards4 = carouselContainer4 ? carouselContainer4.querySelectorAll(".carousel-card") : [];
+  
+  // Carrusel 4 (Mobile)
+  const carouselContainer4Mobile = document.getElementById("carousel-container-4-mobile");
+  const cards4Mobile = carouselContainer4Mobile ? carouselContainer4Mobile.querySelectorAll(".carousel-card-mobile") : [];
 
   const section5 = document.getElementById("section-5");
   const carouselContainer5 = document.getElementById("carousel-container-5");
@@ -12,21 +18,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const carouselContainer7 = document.getElementById("carousel-container-7");
   const cards7 = section7 ? section7.querySelectorAll(".carousel-card-7") : [];
 
+
   // =========================================================
   // MOTOR LÓGICO SECCIÓN 4 
   // =========================================================
-  if (section4 && cards4.length > 0 && carouselContainer4) {
+  if (section4 && (cards4.length > 0 || cards4Mobile.length > 0)) {
     let progress4 = 0;       
     let targetProgress4 = 0; 
     let isAnimating4 = false;
     let isFocused4 = false;
 
     const renderSection4 = () => {
+      // 1. Renderizar Cartas Desktop (Lógica original intacta)
       cards4.forEach((card, index) => {
-        const isMobile = window.innerWidth < 768;
         const startX = 75; 
-        const gap = isMobile ? 12 : 8; 
-        const margin = isMobile ? 5 : 10; 
+        const gap = 8; 
+        const margin = 10; 
         const endX = margin + (index * gap);
         const duration = 0.4; 
         const stagger = 0.2;  
@@ -38,7 +45,50 @@ document.addEventListener("DOMContentLoaded", () => {
         cardProgress = Math.max(0, Math.min(1, cardProgress));
         const easeProgress = cardProgress < 0.5 ? 2 * cardProgress * cardProgress : 1 - Math.pow(-2 * cardProgress + 2, 2) / 2;
         const currentX = startX - (easeProgress * (startX - endX));
+        
         card.style.transform = `translate(${currentX}vw, -50%)`;
+      });
+
+
+      // 2. Renderizar Cartas Mobile (Alineadas a la derecha)
+// 2. Renderizar Cartas Mobile (Adaptadas al celular - Efecto Baraja/Abanico)
+      cards4Mobile.forEach((card, index) => {
+        // Valores Iniciales (Cartas apiladas a la derecha)
+        const startX = 0;
+        const startY = 0;
+        const startScale = 1;
+        const startRotate = 0;
+
+        // Valores Finales (Cartas expandidas)
+        // 1. Reducimos el gap horizontal a 8vw para que NUNCA desborden la pantalla
+        const endX = -(index * 8); 
+        // 2. Agregamos un ligero escalón hacia abajo por carta (2vw)
+        const endY = (index * 2); 
+        // 3. Las cartas de más atrás se hacen ligeramente más chicas (4% menos cada una)
+        const endScale = 1 - (index * 0.04); 
+        // 4. Ligera rotación para dar un efecto de "abanico" (-3 grados por carta)
+        const endRotate = -(index * 3); 
+
+        const duration = 0.4; 
+        const stagger = 0.2;  
+        
+        const cardStart = index * stagger;
+        const cardEnd = cardStart + duration;
+        
+        let cardProgress = (progress4 - cardStart) / (cardEnd - cardStart);
+        cardProgress = Math.max(0, Math.min(1, cardProgress));
+        
+        // Suavizado (Easing) original
+        const easeProgress = cardProgress < 0.5 ? 2 * cardProgress * cardProgress : 1 - Math.pow(-2 * cardProgress + 2, 2) / 2;
+        
+        // Calculamos la posición geométrica exacta en este cuadro de la animación
+        const currentX = startX + (easeProgress * endX);
+        const currentY = startY + (easeProgress * endY);
+        const currentScale = startScale + (easeProgress * (endScale - startScale));
+        const currentRotate = startRotate + (easeProgress * endRotate);
+        
+        // Aplicamos todas las transformaciones CSS juntas para la magia 3D
+        card.style.transform = `translateX(${currentX}vw) translateY(${currentY}vw) scale(${currentScale}) rotate(${currentRotate}deg)`;
       });
     };
 
@@ -54,18 +104,39 @@ document.addEventListener("DOMContentLoaded", () => {
       requestAnimationFrame(smoothAnimate4);
     };
 
-    carouselContainer4.addEventListener("click", (e) => {
-      isFocused4 = true;
-      e.stopPropagation();
-    });
+    // Eventos para Desktop
+    if (carouselContainer4) {
+      carouselContainer4.addEventListener("click", (e) => {
+        isFocused4 = true;
+        e.stopPropagation();
+      });
+    }
+
+    // Eventos para Mobile (MAGIA TÁCTIL)
+    if (carouselContainer4Mobile) {
+      carouselContainer4Mobile.addEventListener("click", (e) => {
+        isFocused4 = true;
+        e.stopPropagation();
+        
+        // Al tocar el carrusel en celular, la animación avanza. 
+        // Si llega al final (0.9), se reinicia a 0.
+        targetProgress4 = targetProgress4 >= 0.9 ? 0 : targetProgress4 + 0.34;
+        if (!isAnimating4) { isAnimating4 = true; smoothAnimate4(); }
+      });
+    }
 
     document.addEventListener("click", (e) => {
-      if (!carouselContainer4.contains(e.target)) {
+      const clickedDesktop = carouselContainer4 && carouselContainer4.contains(e.target);
+      const clickedMobile = carouselContainer4Mobile && carouselContainer4Mobile.contains(e.target);
+
+      // Si tocas fuera del carrusel, las cartas se vuelven a apilar
+      if (!clickedDesktop && !clickedMobile) {
         isFocused4 = false;
-        targetProgress4 = 0;
+        targetProgress4 = 0; 
         if (!isAnimating4) { isAnimating4 = true; smoothAnimate4(); }
       }
     });
+    
 
     document.addEventListener("keydown", (e) => {
       if (isFocused4) {
@@ -82,7 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderSection4();
   }
-
   // =========================================================
   // MOTOR LÓGICO SECCIÓN 5
   // =========================================================

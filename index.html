@@ -10,8 +10,79 @@
 
 <!-- ================= SECCIÓN 1 ================= -->
 <section id="section-1" class="relative w-full bg-brand-dark flex justify-center items-start overflow-visible pt-[0%]">
-  
-  <div class="relative w-full max-w-[1440px] aspect-video z-[10]">
+
+  <!-- ===== VERSIÓN MOBILE (< md): flujo natural, sin absolute/aspect-video ===== -->
+  <div class="block md:hidden relative w-full">
+    <div class="relative w-full min-h-screen bg-[url('../assets/section-1/fondo-section-1.svg')] bg-cover bg-center overflow-hidden flex flex-col">
+      <div class="absolute inset-0 bg-black/40 z-[1] pointer-events-none"></div>
+
+      <!-- EDIFICIO: al fondo, semi-transparente, para no competir con el estuche -->
+      <img src="src/assets/section-1/edificio_section1.svg" alt="Edificio" class="absolute bottom-0 left-0 w-[55%] opacity-50 z-[2] pointer-events-none">
+
+      <!-- PENDIENTES (OJOS DORADOS) Y CUADRO: reducidos y asomando por el borde derecho -->
+      <img src="src/assets/section-1/ojos_section1.svg" alt="Ojos Dorados" class="absolute top-[9%] -right-[5%] w-[15%] z-[5] drop-shadow-md pointer-events-none">
+      <img src="src/assets/section-1/cuadro_section1.svg" alt="Cuadro" class="absolute top-[36%] -right-[7%] w-[15%] z-[5] drop-shadow-md -rotate-6 pointer-events-none">
+
+      <!-- HEADER: logo centrado arriba, botones en fila justo debajo -->
+      <header class="relative z-20 flex flex-col items-center gap-[4%] px-[6%] pt-[8%]">
+        <a href="#" class="flex flex-col items-center justify-center shrink-0">
+          <span class="text-brand-red font-title font-black tracking-tighter text-[clamp(22px,9vw,38px)] leading-none drop-shadow-md">JEANNE</span>
+          <span class="text-brand-red font-title font-black tracking-tighter text-[clamp(22px,9vw,38px)] leading-none drop-shadow-md">RIGAL</span>
+        </a>
+
+        <div class="flex flex-row items-center justify-center gap-[6%]">
+          <a href="#contact" class="min-h-[44px] w-[30vw] max-w-[130px] flex justify-center items-center p-2">
+            <img src="src/assets/section-1/contact.png" alt="Contact" class="w-full h-auto object-contain drop-shadow-md">
+          </a>
+
+          <a href="#services" class="min-h-[44px] w-[32vw] max-w-[140px] flex justify-center items-center p-2">
+            <img src="src/assets/section-1/services.png" alt="Services" class="w-full h-auto object-contain drop-shadow-md">
+          </a>
+        </div>
+      </header>
+
+      <!-- MEET ME: centrado, masivo, con las estrellas flotando alrededor -->
+      <div class="relative z-20 mt-[4%] px-[4%]">
+        <img src="src/assets/section-1/estrellas_section1.svg" alt="Estrellas" class="absolute -top-[15%] right-[6%] w-[18vw] z-[5] drop-shadow-md pointer-events-none">
+        <h1 class="relative z-10 text-center text-brand-red font-title text-[15vw] leading-none drop-shadow-md">
+          MEET ME
+        </h1>
+      </div>
+
+<!-- ESTUCHE GRIS: ocupa casi todo el ancho para que el texto no se desborde -->
+      <div class="relative z-20 w-[92%] mx-auto -mt-[35%] mb-[10%]">
+        <img src="src/assets/section-1/lienzo_gris.svg" alt="Lienzo Gris" class="w-full h-auto drop-shadow-2xl relative z-[1]">
+        
+        <!-- Párrafo 1 (Tapa superior del estuche) -->
+        <div class="absolute top-[38%] left-[8%] right-[8%] z-[2] text-center text-brand-light font-body font-bold text-[clamp(12px,3.5vw,18px)] leading-tight">
+          <p>Helping brands,</p>
+          <p>organizations, and cultural </p>
+          <p>projects tell their story.</p>
+        </div>
+        
+        <!-- Párrafo 2 (Base inferior del estuche) -->
+        <div class="absolute top-[63%] left-[8%] right-[8%] z-[2] text-center text-brand-light font-body font-bold text-[clamp(12px,3.5vw,18px)] leading-tight">
+          <p>& build meaningful </p>
+          <p>connections, to grow </p>
+          <p>their impact through </p>
+          <p>content, media, and </p>
+          <p>community.</p>
+        </div>
+      </div>
+      
+      <!-- FOTO DE JEANNE (Movida fuera del estuche) -->
+      <!-- Ahora sí, bottom-0 la ancla a la base de la pantalla y el contenedor principal la recorta -->
+      <img src="src/assets/section-1/mujer_section1.png" alt="Mujer" class="absolute -bottom-[9%] -right-[5%] w-[35%] z-[15] drop-shadow-xl pointer-events-none">
+      
+    </div>
+
+    <!-- FOTO DE JEANNE + OJITOS PUENTE: asoman por debajo, invitando a seguir el scroll hacia la Sección 2 -->
+    
+    <img src="src/assets/section-1/ojitos_entre_section.svg" alt="Ojos" class="absolute -bottom-[9%] right-[42%] w-[16%] z-[30] drop-shadow-lg pointer-events-none">
+  </div>
+
+  <!-- ===== VERSIÓN DESKTOP (>= md): estructura original sin cambios ===== -->
+  <div class="hidden md:block relative w-full max-w-[1440px] aspect-video z-[10]">
     
     <div class="absolute inset-0 bg-[url('../assets/section-1/fondo-section-1.svg')] bg-cover bg-center overflow-hidden z-[1]">
 
@@ -77,8 +148,54 @@
 
 <!-- ================= SECCIÓN 2 ================= -->
 <section id="section-2" class="relative z-[0] w-full bg-brand-dark flex justify-center items-start overflow-visible pt-[0%]">
-  
-  <div class="relative w-full max-w-[1440px] aspect-video z-[10]">
+
+<!-- ===== VERSIÓN MOBILE (< md) ===== -->
+  <div class="block md:hidden relative w-full">
+    <!-- Le quitamos el min-h-screen y usamos un padding amplio para que crezca natural -->
+    <div class="relative w-full pt-[15%] pb-[25%] bg-[url('../assets/section-2/fondo-section-2.png')] bg-cover bg-center overflow-hidden flex flex-col">
+      <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+
+      <!-- 1. TÍTULO: Centrado y masivo en la parte superior -->
+      <div class="relative z-10 flex flex-col items-center mb-[10%]">
+        <h2 class="text-brand-red font-title tracking-tighter text-[15vw] leading-[0.8] drop-shadow-md">TOOLS &amp;</h2>
+        <h2 class="text-brand-red font-title tracking-tighter text-[18vw] leading-[0.8] drop-shadow-md">SKILLS</h2>
+      </div>
+
+      <!-- 2. TICKET GUEST CHECK: Contenedor que mantiene la proporción -->
+      <div class="relative z-10 w-[92%] mx-auto mb-[5%] drop-shadow-2xl">
+        
+        <!-- Imagen de fondo del ticket que dicta el tamaño de la caja -->
+        <img src="src/assets/section-2/guest_section2.svg" alt="Guest Check" class="w-full h-auto pointer-events-none">
+        
+        <!-- Textos posicionados con % exactos sobre el ticket -->
+        <div class="absolute inset-0 z-[5] text-brand-red tracking-tighter tracking-widest">
+          
+          <h3 class="absolute top-[34%] font-title left-[12%] text-[clamp(12px,4vw,25px)] leading-none">VISUAL DESIGN :</h3>
+          <p class="absolute top-[40%] font-title left-[17%] text-[clamp(10px,3.2vw,20px)] leading-none">ADOBE SUITE (PHOTOSHOP). CANVA PRO</p>
+
+          <h3 class="absolute top-[48%] font-title left-[12%] text-[clamp(12px,4vw,25px)] leading-none">EMAIL MARKETING :</h3>
+          <p class="absolute top-[54%] font-title left-[17%] text-[clamp(10px,3.2vw,20px)] leading-none">MAILJET. BREVO. GET RESPONSE</p>
+
+          <h3 class="absolute top-[62%] font-title left-[12%] text-[clamp(12px,4vw,25px)] leading-none">WEBSITE CREATION :</h3>
+          <p class="absolute top-[68%] font-title left-[17%] text-[clamp(10px,3.2vw,20px)] leading-none">WIX. JIMDO. SHOPIFY</p>
+
+          <h3 class="absolute top-[76%] font-title left-[12%] text-[clamp(12px,4vw,25px)] leading-none">VIDEO EDITING :</h3>
+          <p class="absolute top-[82%] font-title left-[17%] text-[clamp(10px,3.2vw,20px)] leading-none">PREMIERE PRO</p>
+
+          <h3 class="absolute top-[90%] font-title left-[12%] text-[clamp(12px,4vw,25px)] leading-none">MEDIA MONITORING :</h3>
+          <p class="absolute top-[96%] font-title left-[17%] text-[clamp(10px,3.2vw,20px)] leading-none">ONCLUSIVE. CISION</p>
+
+        </div>
+      </div>
+
+      <!-- 3. AUTO AMARILLO: Anclado abajo a la derecha, saliendo un poco -->
+      <img src="src/assets/section-2/auto_section2.svg" alt="Auto" class="absolute bottom-[2%] -right-[10%] w-[65%] z-[15] drop-shadow-xl pointer-events-none">
+
+    </div>
+  </div>
+
+  <!-- ===== VERSIÓN DESKTOP (>= md): estructura original sin cambios ===== -->
+  <div class="hidden md:block relative w-full max-w-[1440px] aspect-video z-[10]">
     
     <div class="absolute inset-0 bg-[url('../assets/section-2/fondo-section-2.png')] bg-cover bg-center overflow-hidden z-[1]">
       
@@ -86,7 +203,7 @@
 
       <div class="absolute top-0 left-0 h-full z-[3]">
         
-        <img src="src/assets/section-2/guest_section2.svg" alt="Guest" class="h-full w-auto relative z-[2] drop-shadow-md pointer-events-none">
+        <img src="src/assets/section-2/guest_section2.svg" alt="Guest" loading="lazy" class="h-full w-auto relative z-[2] drop-shadow-md pointer-events-none">
 
         <div class="absolute inset-0 z-[5] text-brand-red tracking-tighter tracking-widest">
           
@@ -114,7 +231,7 @@
       </div>
 
     </div> 
-    <img src="src/assets/section-2/auto_section2.svg" alt="Auto" class="absolute bottom-[-1%] right-[-4%] w-[40%] z-[15] drop-shadow-xl transition-transform duration-500 ease-out hover:-translate-x-6 hover:scale-105 cursor-pointer">
+    <img src="src/assets/section-2/auto_section2.svg" alt="Auto" loading="lazy" class="absolute bottom-[-1%] right-[-4%] w-[40%] z-[15] drop-shadow-xl transition-transform duration-500 ease-out hover:-translate-x-6 hover:scale-105 cursor-pointer">
     
   </div>
 </section>
@@ -122,16 +239,72 @@
 
 <!-- ================= SECCIÓN 3 ================= -->
 <section id="section-3" class="relative z-[0] w-full bg-brand-dark flex justify-center items-start overflow-visible pt-[0%]">
-  
-  <!-- CHASIS PROTEGIDO (16:9) -->
-  <div class="relative w-full max-w-[1440px] aspect-video z-[10]">
+
+  <!-- ===== VERSIÓN MOBILE (< md) ===== -->
+   <!-- ===== VERSIÓN MOBILE (< md) : Opción 2 (Texto Prioritario + Collage Integrado) ===== -->
+  <div class="block md:hidden relative w-full">
+    
+    <!-- Contenedor Principal (Fondo de patrón para toda la sección) -->
+    <div class="relative w-full min-h-screen bg-[url('../assets/section-3/fondo_section3.png')] bg-cover bg-center flex flex-col justify-center py-[15%] overflow-hidden">
+
+      <!-- ================= 1. ELEMENTOS DECORATIVOS (Al fondo) ================= -->
+      
+      <!-- La Revista: Anclada a la derecha, desvanecida como textura -->
+      <img src="src/assets/section-3/periodico_section3.svg" alt="Revista" class="absolute top-0 -right-[25%] w-[85%] h-full object-cover object-left opacity-30 z-[1] pointer-events-none mix-blend-multiply">
+      
+      <!-- Las Galletas: Tira vertical asomándose por el borde derecho de la pantalla -->
+      <img src="src/assets/section-3/Galletas_mitad_section3.svg" alt="Galletas" class="absolute top-[20%] -right-[8%] h-[60%] w-auto z-[2] opacity-70 pointer-events-none drop-shadow-lg">
+
+      <!-- La Gorra: Flotando arriba a la derecha -->
+      <img src="src/assets/section-3/gorra_section3.svg" alt="Gorra" class="absolute top-[6%] right-[5%] w-[20%] z-[3] rotate-12 drop-shadow-xl pointer-events-none">
+
+
+      <!-- ================= 2. INFORMACIÓN PRIORITARIA (Al frente) ================= -->
+      <div class="relative z-10 px-[7%] w-[95%]">
+        
+        <!-- Título ABOUT ME -->
+        <div class="text-brand-red font-title font-black tracking-tighter leading-[0.8] mb-[12%] drop-shadow-md">
+          <h2 class="text-[clamp(45px,16vw,70px)]">ABOUT</h2>
+          <h2 class="text-[clamp(45px,16vw,70px)] ml-[15%]">ME</h2>
+        </div>
+
+        <!-- Educación -->
+        <div class="text-dark font-body flex flex-col gap-[8%]">
+          <h3 class="text-brand-red font-title font-black tracking-tighter text-[clamp(24px,8vw,32px)] tracking-wide leading-none mb-[2%] drop-shadow-sm">EDUCATION</h3>
+
+          <div class="mb-[5%]">
+            <p class="font-body font-black text-[clamp(15px,4.5vw,20px)] leading-snug">CELSA – SORBONNE UNIVERSITÉ</p>
+            <p class="text-[clamp(13px,3.8vw,16px)] leading-snug">2025–2027</p>
+            <p class="text-[clamp(13px,3.8vw,16px)] leading-snug">Master's in Consulting, Management &amp;</p>
+            <p class="text-[clamp(13px,3.8vw,16px)] leading-snug">Media – Creative &amp; Cultural Industries</p>
+          </div>
+
+          <div class="mb-[5%]">
+            <p class="font-body font-black text-[clamp(15px,4.5vw,20px)] leading-snug">UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO (UNAM)</p>
+            <p class="text-[clamp(13px,3.8vw,16px)] leading-snug">2024–2025</p>
+            <p class="text-[clamp(13px,3.8vw,16px)] leading-snug">Coursework : Marketing &amp; Media Theory</p>
+          </div>
+
+          <div>
+            <p class="font-body font-black text-[clamp(15px,4.5vw,20px)] leading-snug">UNIVERSITÉ PARIS 1 PANTHÉON SORBONNE</p>
+            <p class="text-[clamp(13px,3.8vw,16px)] leading-snug">2020–2023</p>
+            <p class="text-[clamp(13px,3.8vw,16px)] leading-snug">Double Bachelor's – Law &amp; Economics</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== VERSIÓN DESKTOP (>= md): estructura original sin cambios ===== -->
+  <div class="hidden md:block relative w-full max-w-[1440px] aspect-video z-[10]">
     
     <!-- ================= 1. MÁSCARA INTERNA ================= -->
     <div class="absolute inset-0 bg-[url('../assets/section-3/fondo_section3.png')] bg-cover bg-center overflow-hidden z-[1]">
       
       <!-- Revista / Periódico (Lado Derecho) -->
       <div class="absolute top-[0px] right-[0px] z-[1] w-[50%] h-full">
-        <img src="src/assets/section-3/periodico_section3.svg" alt="Revista" class="w-full h-full object-cover object-top pointer-events-none">
+        <img src="src/assets/section-3/periodico_section3.svg" alt="Revista" loading="lazy" class="w-full h-full object-cover object-top pointer-events-none">
       </div>
       
 
@@ -177,42 +350,79 @@
     <!-- ================= 2. ELEMENTOS LIBRES ================= -->
     <!-- GALLETAS (Centro) -->
     <!-- Mantenemos su altura en h-[85%] para que respete el lienzo vectorizado -->
-    <img src="src/assets/section-3/Galletas_mitad_section3.svg" alt="Galletas" class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[85%] w-auto z-[4] drop-shadow-xl transition-transform duration-700 hover:rotate-180 cursor-pointer pointer-events-auto">
+    <img src="src/assets/section-3/Galletas_mitad_section3.svg" alt="Galletas" loading="lazy" class="absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[85%] w-auto z-[4] drop-shadow-xl transition-transform duration-700 hover:rotate-180 cursor-pointer pointer-events-auto">
 
     <!-- GORRA (Derecha arriba) -->
-    <img src="src/assets/section-3/gorra_section3.svg" alt="Gorra" class="absolute top-[21%] right-[13%] w-[15%] z-[5] drop-shadow-2xl cursor-move transition-transform hover:scale-105 pointer-events-auto">
+    <img src="src/assets/section-3/gorra_section3.svg" alt="Gorra" loading="lazy" class="absolute top-[21%] right-[13%] w-[15%] z-[5] drop-shadow-2xl cursor-move transition-transform hover:scale-105 pointer-events-auto">
 
   </div>
 </section>
 
 
 <!-- ================= SECCIÓN 4  ================= -->
-<section id="section-4" class="relative w-full h-screen bg-brand-light z-[10] overflow-visible">
+<section id="section-4" class="relative w-full min-h-screen bg-brand-light z-[10] overflow-visible">
     
-    <!-- 2. Cambiamos overflow-hidden por overflow-visible en el div de fondo -->
-    <div class="relative w-full h-screen bg-[url('../assets/section-4/fondo_section4.png')] bg-cover bg-center overflow-visible">
+  <!-- ===== VERSIÓN MOBILE (< md) ===== -->
+  <div class="block md:hidden relative w-full">
+    <div class="relative w-full min-h-[90vh] bg-[url('../assets/section-4/fondo_section4.png')] bg-cover bg-center overflow-hidden flex flex-col pt-[15%] pb-[10%]">
+      
+      <!-- Títulos apilados -->
+      <div class="relative z-10 px-[6%] mb-[8%] text-center">
+        <h2 class="text-brand-red font-title text-[clamp(40px,12vw,60px)] leading-[0.85] drop-shadow-sm">PUBLIC<br>RELATIONS</h2>
+        <p class="font-title font-bold text-[clamp(12px,3.5vw,16px)] text-brand-dark mt-[4%] tracking-wide">MUSIC INDUSTRY - MEDIA STRATEGY</p>
+      </div>
+
+      <div class="relative z-10 px-[6%] text-center mb-[10%]">
+        <h2 class="text-brand-red font-title text-[clamp(35px,11vw,55px)] leading-[0.9] drop-shadow-sm">SOME<br>OF MY<br>WORK</h2>
+      </div>
+
+      <!-- CONTENEDOR INTERACTIVO MOBILE -->
+      <div id="carousel-container-4-mobile" tabindex="0" class="relative w-full h-[40vh] overflow-hidden pointer-events-auto cursor-pointer z-[5] bg-transparent outline-none">
+        
+        <!-- Cambiamos left-[8%] por right-[6%] para anclarlas a la derecha con padding -->
+        <img src="src/assets/section-4/imagen1.png" class="carousel-card-mobile absolute top-0 right-[6%] w-[65vw] aspect-square object-cover shadow-2xl z-[1]">
+        <img src="src/assets/section-4/imagen2.png" class="carousel-card-mobile absolute top-0 right-[6%] w-[65vw] aspect-square object-cover shadow-2xl z-[2]">
+        <img src="src/assets/section-4/imagen3.png" class="carousel-card-mobile absolute top-0 right-[6%] w-[65vw] aspect-square object-cover shadow-2xl z-[3]">
+        <img src="src/assets/section-4/imagen4.png" class="carousel-card-mobile absolute top-0 right-[6%] w-[65vw] aspect-square object-cover shadow-2xl z-[4]">
+        
+      </div>
+
+      <!-- Logo Deezer anclado abajo -->
+      <div class="relative z-10 flex justify-center mt-auto pt-[5%]">
+        <img src="src/assets/section-4/deezer.svg" alt="Deezer" class="h-[35px] drop-shadow-md">
+      </div>
+
+      <!-- Estrella Puente Mobile -->
+      <div class="absolute bottom-0 left-[8%] w-[70px] transform translate-y-1/2 z-[20] pointer-events-none">
+        <img src="src/assets/section-4/estrella.png" alt="Estrella" class="w-full h-full drop-shadow-xl animate-[spin_6s_linear_infinite]">  
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== VERSIÓN DESKTOP (>= md): estructura original sin cambios ===== -->
+  <div class="hidden md:block relative w-full min-h-screen bg-[url('../assets/section-4/fondo_section4.png')] bg-cover bg-center overflow-visible">
       
       <!-- Títulos y elementos visuales -->
       <div class="absolute top-[4%] left-[5%] md:left-[8%] z-[10]">
-        <h2 class="text-brand-red font-title text-[50px] md:text-[50px] leading-[0.85] drop-shadow-sm">PUBLIC<br>RELATIONS</h2>
-        <p class="font-title font-bold text-[14px] md:text-[22px] text-brand-dark mt-[70px]">MUSIC INDUSTRY - MEDIA STRATEGY</p>
+        <h2 class="text-brand-red font-title text-[clamp(32px,9vw,50px)] md:text-[50px] leading-[0.85] drop-shadow-sm">PUBLIC<br>RELATIONS</h2>
+        <p class="font-title font-bold text-[clamp(11px,3vw,14px)] md:text-[22px] text-brand-dark mt-[70px]">MUSIC INDUSTRY - MEDIA STRATEGY</p>
       </div>
 
       <div class="absolute top-[4%] right-[5%] md:right-[8%] z-[10] text-right">
-        <h2 class="text-brand-red font-title text-[65px] md:text-[65px] leading-[1] drop-shadow-sm">SOME<br>OF MY<br>WORK</h2>
+        <h2 class="text-brand-red font-title text-[clamp(34px,11vw,65px)] md:text-[65px] leading-[1] drop-shadow-sm">SOME<br>OF MY<br>WORK</h2>
       </div>
 
       <div class="absolute bottom-[10%] md:bottom-[2%] left-[50%] transform -translate-x-1/2 z-[10]">
         <img src="src/assets/section-4/deezer.svg" alt="Deezer" class="h-[50px] md:h-[70px] drop-shadow-md">
       </div>
 
-      <!-- ESTRELLA PUENTE: Ahora brillará libremente sobre la Sección 5 -->
+      <!-- ESTRELLA PUENTE -->
       <div class="absolute bottom-[0px] left-[5%] md:left-[8%] w-[100px] md:w-[150px] transform translate-y-1/2 z-[20] pointer-events-none">
         <img src="src/assets/section-4/estrella.png" alt="Estrella" class="w-full h-full drop-shadow-xl animate-[spin_6s_linear_infinite]">  
       </div>
 
-      <!-- CONTENEDOR INTERACTIVO: Conserva su propio overflow-hidden para las tarjetas -->
-       <!-- Se añadió bg-transparent, tabindex="0" y outline-none -->
+      <!-- CONTENEDOR INTERACTIVO DESKTOP -->
       <div id="carousel-container-4" tabindex="0" class="absolute inset-0 w-full h-full overflow-hidden pointer-events-auto cursor-pointer z-[5] bg-transparent outline-none">
         <img src="src/assets/section-4/imagen1.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[1]">
         <img src="src/assets/section-4/imagen2.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[2]">
@@ -220,23 +430,23 @@
         <img src="src/assets/section-4/imagen4.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[4]">
       </div>
 
-    </div>
+  </div>
 </section>
 
   <!-- ================= SECCIÓN 5 ================= -->
   <!-- 1. Cambiamos overflow-hidden por overflow-visible -->
-<section id="section-5" class="relative w-full h-screen z-[3] overflow-visible">
+<section id="section-5" class="relative w-full min-h-screen z-[3] overflow-visible">
     
     <!-- 2. Quitamos el overflow-hidden del final de las clases de este div -->
-    <div class="relative w-full h-screen bg-[url('../assets/section-5/fondo_section5.png')] bg-cover bg-center bg-no-repeat pt-[10vh] px-[5%] md:px-[8%] flex flex-col md:flex-row justify-between items-center gap-[15px] md:gap-[50px]">
+    <div class="relative w-full min-h-screen bg-[url('../assets/section-5/fondo_section5.png')] bg-cover bg-center bg-no-repeat pt-[10vh] px-[5%] md:px-[8%] flex flex-col md:flex-row justify-between items-center gap-[15px] md:gap-[50px]">
       
       <div class="w-full md:w-[60%] flex flex-col relative z-[2]">
         
-        <h2 class="text-brand-red font-title text-[45px] md:text-[50px] leading-[0.85] drop-shadow-sm uppercase transform -translate-y-[10px] md:-translate-y-[70px]">
+        <h2 class="text-brand-red font-title text-[clamp(28px,9vw,45px)] md:text-[50px] leading-[0.85] drop-shadow-sm uppercase transform -translate-y-[10px] md:-translate-y-[70px]">
           SOCIAL MEDIA &<br>CONTENT
         </h2>
         
-        <p class="font-title text-[12px] md:text-[18px] text-brand-dark mt-[10px] md:mt-[20px] mb-[20px] md:mb-[30px] uppercase">
+        <p class="font-title text-[clamp(10px,3vw,12px)] md:text-[18px] text-brand-dark mt-[10px] md:mt-[20px] mb-[20px] md:mb-[30px] uppercase">
           CINEMA INDUSTRY - INSTAGRAM
         </p>
 
@@ -251,9 +461,9 @@
 
       <div class="w-full md:w-[35%] flex flex-col items-center md:items-start justify-center relative z-[2] transform -translate-y-[20px] md:-translate-y-[230px]">
         
-        <img src="src/assets/section-5/playtime_section5.png" alt="Playtime" class="w-[120px] md:w-[220px] mb-[15px] md:mb-[30px] drop-shadow-md self-center md:self-start md:-ml-[20px] transform -translate-x-[250px] transform translate-y-[250px]">
+        <img src="src/assets/section-5/playtime_section5.png" alt="Playtime" class="w-[120px] md:w-[220px] mb-[15px] md:mb-[30px] drop-shadow-md self-center md:self-start md:-ml-[20px] md:transform md:-translate-x-[250px] md:translate-y-[250px]">
 
-        <h3 class="font-title font-brand-dark text-[16px] md:text-[20px] text-brand-dark mb-[10px] md:mb-[15px] tracking-widest uppercase self-center drop-shadow-sm">
+        <h3 class="font-title font-brand-dark text-[clamp(13px,4vw,16px)] md:text-[20px] text-brand-dark mb-[10px] md:mb-[15px] tracking-widest uppercase self-center drop-shadow-sm">
           FILM POSTER
         </h3>
 
@@ -276,13 +486,13 @@
       <div class="relative w-full max-w-[1440px] mx-auto min-h-screen h-full">
 
         <div class="absolute top-[8%] md:top-[8%] left-[5%] md:left-[8%] z-[10]">
-          <h2 class="text-brand-red font-title text-[55px] md:text-[75px] leading-[0.85] drop-shadow-sm uppercase">
+          <h2 class="text-brand-red font-title text-[clamp(34px,11vw,55px)] md:text-[75px] leading-[0.85] drop-shadow-sm uppercase">
             MORE<br>ABOUT<br>ME
           </h2>
         </div>
 
         <div class="absolute top-[38%] md:top-[48%] left-[20%] md:left-[22%] z-[10]">
-          <h3 class="text-brand-red font-title text-[28px] md:text-[40px] leading-[0.85] drop-shadow-sm uppercase">
+          <h3 class="text-brand-red font-title text-[clamp(18px,6vw,28px)] md:text-[40px] leading-[0.85] drop-shadow-sm uppercase">
             PODCAST -<br>RADIO<br>PRESENTER
           </h3>
         </div>
@@ -310,15 +520,15 @@
   </section>
 
   <!-- ================= SECCIÓN 7 ================= -->
-<section id="section-7" class="relative w-full h-screen z-[21] overflow-hidden">
+<section id="section-7" class="relative w-full min-h-screen z-[21] overflow-hidden">
     
-    <div class="relative w-full h-screen bg-[url('../assets/section-5/fondo_section5.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
+    <div class="relative w-full min-h-screen bg-[url('../assets/section-5/fondo_section5.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
       
       <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-0 left-[35%] transform -translate-x-1/2 -translate-y-1/2 w-[80px] md:w-[120px] z-[20] drop-shadow-md pointer-events-none">
       <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-0 right-[25%] transform translate-y-[-50%] w-[80px] md:w-[120px] z-[20] drop-shadow-md pointer-events-none">
 
       <div class="absolute top-[10%] md:top-[10%] left-[5%] md:left-[8%] z-[10]">
-        <h2 class="text-brand-red font-title text-[45px] md:text-[50px] leading-[0.85] drop-shadow-sm uppercase">
+        <h2 class="text-brand-red font-title text-[clamp(28px,9vw,45px)] md:text-[50px] leading-[0.85] drop-shadow-sm uppercase">
           PHOTOGRAPHER
         </h2>
       </div>

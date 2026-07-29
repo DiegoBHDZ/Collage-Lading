@@ -9,6 +9,8 @@
     src: url('../assets/fonts/sunborn-sans-one.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+    /* Evita texto invisible mientras carga la fuente (FOIT) en cualquier dispositivo */
+    font-display: swap;
   }
 
   @font-face {
@@ -16,5 +18,31 @@
     src: url('../assets/fonts/ITC Franklin Gothic LT Medium.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
+  }
+
+  html {
+    /* Evita que Safari/Chrome en iOS y Android reajusten automáticamente el
+       tamaño de fuente al rotar la pantalla, garantizando el mismo tamaño
+       tipográfico visual en todos los dispositivos. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* Renderizado consistente de la tipografía entre Windows, macOS e iOS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Área táctil mínima recomendada por Apple/Google (44x44px) para todo
+     elemento interactivo en pantallas móviles, sin afectar el diseño desktop */
+  @media (max-width: 767px) {
+    a,
+    button {
+      min-height: 44px;
+    }
   }
 }
