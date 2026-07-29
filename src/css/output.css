@@ -941,6 +941,46 @@ body {
   top: 96%;
 }
 
+.bottom-\[16\%\] {
+  bottom: 16%;
+}
+
+.bottom-\[41\%\] {
+  bottom: 41%;
+}
+
+.left-\[6\%\] {
+  left: 6%;
+}
+
+.top-\[17\%\] {
+  top: 17%;
+}
+
+.top-\[24\%\] {
+  top: 24%;
+}
+
+.top-\[23\%\] {
+  top: 23%;
+}
+
+.top-\[29\%\] {
+  top: 29%;
+}
+
+.top-\[3\%\] {
+  top: 3%;
+}
+
+.right-\[48\%\] {
+  right: 48%;
+}
+
+.right-\[38\%\] {
+  right: 38%;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -1015,6 +1055,10 @@ body {
 
 .z-\[7\] {
   z-index: 7;
+}
+
+.z-\[40\] {
+  z-index: 40;
 }
 
 .mx-auto {
@@ -1098,6 +1142,10 @@ body {
   margin-top: auto;
 }
 
+.mt-\[2\%\] {
+  margin-top: 2%;
+}
+
 .block {
   display: block;
 }
@@ -1156,6 +1204,22 @@ body {
 
 .h-full {
   height: 100%;
+}
+
+.h-\[50\%\] {
+  height: 50%;
+}
+
+.h-\[30\%\] {
+  height: 30%;
+}
+
+.h-\[65\%\] {
+  height: 65%;
+}
+
+.h-\[40\%\] {
+  height: 40%;
 }
 
 .min-h-\[44px\] {
@@ -1308,6 +1372,14 @@ body {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[46\%\] {
+  width: 46%;
+}
+
+.w-\[10\%\] {
+  width: 10%;
 }
 
 .max-w-\[130px\] {
@@ -1703,10 +1775,6 @@ body {
   font-size: clamp(12px, 4vw, 25px);
 }
 
-.text-\[clamp\(13px\2c 1\.7vw\2c 24px\)\] {
-  font-size: clamp(13px, 1.7vw, 24px);
-}
-
 .text-\[clamp\(13px\2c 3\.8vw\2c 16px\)\] {
   font-size: clamp(13px, 3.8vw, 16px);
 }
@@ -1777,6 +1845,74 @@ body {
 
 .text-\[clamp\(45px\2c 16vw\2c 70px\)\] {
   font-size: clamp(45px, 16vw, 70px);
+}
+
+.text-\[clamp\(5px\2c 10vw\2c 24px\)\] {
+  font-size: clamp(5px, 10vw, 24px);
+}
+
+.text-\[clamp\(5px\2c 40vw\2c 24px\)\] {
+  font-size: clamp(5px, 40vw, 24px);
+}
+
+.text-\[clamp\(5px\2c 1vw\2c 24px\)\] {
+  font-size: clamp(5px, 1vw, 24px);
+}
+
+.text-\[clamp\(6px\2c 1\.5vw\2c 20px\)\] {
+  font-size: clamp(6px, 1.5vw, 20px);
+}
+
+.text-\[clamp\(6px\2c 2vw\2c 25px\)\] {
+  font-size: clamp(6px, 2vw, 25px);
+}
+
+.text-\[clamp\(5px\2c 17vw\2c 24px\)\] {
+  font-size: clamp(5px, 17vw, 24px);
+}
+
+.text-\[clamp\(5px\2c 1\.7vw\2c 24px\)\] {
+  font-size: clamp(5px, 1.7vw, 24px);
+}
+
+.text-\[clamp\(6px\2c 1\.7vw\2c 24px\)\] {
+  font-size: clamp(6px, 1.7vw, 24px);
+}
+
+.text-\[clamp\(6px\2c 1\.6vw\2c 20px\)\] {
+  font-size: clamp(6px, 1.6vw, 20px);
+}
+
+.text-\[clamp\(6px\2c 4vw\2c 35px\)\] {
+  font-size: clamp(6px, 4vw, 35px);
+}
+
+.text-\[clamp\(6px\2c 11vw\2c 75px\)\] {
+  font-size: clamp(6px, 11vw, 75px);
+}
+
+.text-\[clamp\(6px\2c 6vw\2c 40px\)\] {
+  font-size: clamp(6px, 6vw, 40px);
+}
+
+.text-\[clamp\(6px\2c 9vw\2c 50px\)\] {
+  font-size: clamp(6px, 9vw, 50px);
+}
+
+.text-\[clamp\(6px\2c 1\.3vw\2c 18px\)\] {
+  font-size: clamp(6px, 1.3vw, 18px);
+}
+
+.text-\[clamp\(6px\2c 1\.5vw\2c 22px\)\] {
+  font-size: clamp(6px, 1.5vw, 22px);
+}
+
+.text-\[clamp\(6px\2c 11vw\2c 65px\)\] {
+  font-size: clamp(6px, 11vw, 65px);
+}
+
+.text-\[clamp\(6px\2c 5vw\2c 50px\)\] {
+  font-size: clamp(6px, 5vw, 50px);
 }
 
 .font-black {
