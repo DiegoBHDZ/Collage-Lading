@@ -9,107 +9,131 @@
 <body class="bg-brand-dark overflow-x-hidden text-brand-dark">
 
 <!-- ================= SECCIÓN 1 ================= -->
-<section id="section-1" class="relative w-full bg-brand-dark overflow-visible">
+<section id="section-1" class="relative w-full bg-brand-dark bg-[url('../assets/section-1/fondo-section-1.png')] bg-cover bg-center overflow-visible z-[10]">
+  
+  <!-- Overlay oscuro base -->
+  <div class="absolute inset-0 bg-black/40 z-[1] pointer-events-none"></div>
 
-  <div class="relative w-full max-w-[1440px] mx-auto aspect-video overflow-hidden z-[10]">
+  <!-- Contenedor Proporcional 16:9 -->
+  <div class="relative w-full max-w-[1440px] mx-auto aspect-video z-[10]">
 
-    <div class="absolute inset-0 bg-[url('../assets/section-1/fondo-section-1.svg')] bg-cover bg-center overflow-hidden z-[1]">
+    <!-- 1. EDIFICIO (z-[2]) -->
+    <img src="src/assets/section-1/edificio_section1.svg" alt="Edificio" class="absolute bottom-[0%] left-[2%] w-[57%] z-[2] drop-shadow-xl pointer-events-none">
 
-      <div class="absolute inset-0 bg-black/40 z-[1] pointer-events-none"></div>
+    <!-- 2. ESTRELLAS PUENTE (z-[4]: Arriba del edificio, abajo del estuche, salen a la sección 2) -->
+    <img src="src/assets/section-1/estrellas_section1.svg" alt="Estrellas" class="absolute bottom-[-15%] left-[2%] w-[28%] z-[4] drop-shadow-md pointer-events-none">
 
-      <img src="src/assets/section-1/edificio_section1.svg" alt="Edificio" class="absolute bottom-[-1%] left-[2%] w-[57%] z-[2] drop-shadow-xl pointer-events-none">
+    <img src="src/assets/section-1/ojos_section1.svg" alt="Ojos Dorados" class="absolute top-[18%] right-[12%] w-[15%] z-[5] drop-shadow-md animate-[pulse_4s_ease-in-out_infinite] cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 active:rotate-6">
 
-      <img src="src/assets/section-1/ojos_section1.svg" alt="Ojos Dorados" class="absolute top-[18%] right-[12%] w-[15%] z-[5] drop-shadow-md animate-[pulse_4s_ease-in-out_infinite] cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 active:rotate-6">
+<!-- 3. ESTUCHE GRIS (z-[6]: Arriba de las estrellas) -->
+    <div class="absolute -top-[7%] left-[18%] z-[6] w-[43%]" style="container-type: inline-size;">
+      <img src="src/assets/section-1/lienzo_gris.svg" alt="Lienzo Gris" class="w-full h-auto drop-shadow-2xl relative z-[10]">
+      <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[32%] left-0 w-full h-auto z-[15] pointer-events-none">
+      <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[58%] left-0 w-full h-auto z-[15] pointer-events-none">
 
-      <img src="src/assets/section-1/cuadro_section1.svg" alt="Cuadro" class="absolute top-[48%] right-[8%] w-[20%] z-[12] drop-shadow-md -rotate-6">
-
-      <img src="src/assets/section-1/mujer_section1.png" alt="Mujer" class="absolute -bottom-[14%] -right-[9%] w-[25%] z-[15] drop-shadow-xl">
-
+      <!-- Texto Superior (Tapa) -->
+      <div class="absolute z-[21] flex flex-col justify-center" style="top: 42%; bottom: 52%; left: 22%; right: 10%;">
+        <p class="text-brand-light font-body font-bold" style="font-size: clamp(6px, 5cqw, 50px); line-height: 1.4;">
+          Helping brands,<br>organizations, and cultural<br>projects tell their story,
+        </p>
+      </div>
+      
+      <!-- Texto Inferior (Base) -->
+      <div class="absolute z-[21] flex flex-col justify-center" style="top: 61%; bottom: 17%; left: 23%; right: 10%;">
+        <p class="text-brand-light font-body" style="letter-spacing: 0.03em; font-weight: bold; font-size: clamp(6px, 5cqw, 50px); line-height: 1.4;">
+          & build meaningful<br>connections, to grow<br>their impact through<br>content, media, and<br>community.
+        </p>
+      </div>
     </div>
 
-    <header class="absolute top-[4%] left-0 w-full flex justify-center gap-[10%] items-center px-[5%] z-[50]">
+    <!-- 4. CUADRO (z-[12]) -->
+    <img src="src/assets/section-1/cuadro_section1.svg" alt="Cuadro" class="absolute top-[48%] right-[8%] w-[20%] z-[12] drop-shadow-md -rotate-6">
 
-      <a href="#contact" class="w-[18%] max-w-[160px] flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 -mt-[30px]">
+    <!-- ========================================================================= -->
+    <!-- 5. MUJER (z-[15]): CAJA INVISIBLE CON OVERFLOW-HIDDEN PARA CORTAR EXCESOS -->
+    <!-- ========================================================================= -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-[15]">
+      <img src="src/assets/section-1/mujer_section1.png" alt="Mujer" class="absolute -bottom-[15%] -right-[10%] w-[25%] drop-shadow-xl">
+    </div>
+
+    <header class="absolute top-[4%] left-0 w-full flex justify-center gap-[8%] items-center px-[5%] z-[50]">
+      <a href="#contact" class="w-[25%] max-w-[200px] flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 -mt-[30px]">
         <img src="src/assets/section-1/contact.png" alt="Contact" class="w-full h-auto object-contain drop-shadow-md">
       </a>
-
       <a href="#" class="flex flex-col items-center justify-center hover:opacity-80 transition-opacity shrink-0">
-        <span class="text-brand-red font-title font-black tracking-tighter text-[4vw] max-[1440px]:xl:text-[55px] leading-none drop-shadow-md">JEANNE</span>
-        <span class="text-brand-red font-title font-black tracking-tighter text-[4vw] max-[1440px]:xl:text-[55px] leading-none drop-shadow-md">RIGAL</span>
+        <span class="text-brand-red font-title font-black tracking-tighter text-[clamp(16px,4vw,55px)] leading-none drop-shadow-md">JEANNE</span>
+        <span class="text-brand-red font-title font-black tracking-tighter text-[clamp(16px,4vw,55px)] leading-none drop-shadow-md">RIGAL</span>
       </a>
-
-      <a href="#services" class="w-[19%] max-w-[165px] flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 -mt-[30px]">
+      <a href="#services" class="w-[25%] max-w-[200px] flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 -mt-[30px]">
         <img src="src/assets/section-1/services.png" alt="Services" class="w-full h-auto object-contain drop-shadow-md">
       </a>
     </header>
 
-    <h1 class="absolute top-[25%] left-[7%] text-brand-red font-title text-[9vw] max-[1440px]:xl:text-[90px] leading-none z-[30] drop-shadow-md pointer-events-none">
+    <h1 class="absolute top-[23%] left-[3%] text-brand-red font-title text-[clamp(40px,9vw,125px)] leading-none z-[30] drop-shadow-md pointer-events-none">
       MEET ME
     </h1>
 
-    <div class="absolute -top-[7%] left-[18%] z-[6] w-[43%]">
-      <img src="src/assets/section-1/lienzo_gris.svg" alt="Lienzo Gris" class="w-full h-auto drop-shadow-2xl relative z-[10]">
-      <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[28%] left-0 w-full h-auto z-[15] pointer-events-none">
-      <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[58%] left-0 w-full h-auto z-[15] pointer-events-none">
-
-      <!-- Cajas de texto ancladas a los 4 bordes del estuche, con clamp() de mínimo microscópico -->
-      <div class="absolute top-[39%] bottom-[41%] left-[30%] right-[9%] z-[21] text-brand-light font-body font-bold text-[clamp(6px,1.7vw,24px)] leading-tight flex flex-col justify-center">
-        <p>Helping brands,<br>organizations, and cultural<br>projects tell their story.</p>
-      </div>
-      <div class="absolute top-[63%] bottom-[16%] left-[30%] right-[9%] z-[21] text-brand-light font-body font-bold text-[clamp(6px,1.7vw,24px)] leading-tight flex flex-col justify-center">
-        <p>& build meaningful<br>connections, to grow<br>their impact through<br>content, media, and<br>community.</p>
-      </div>
-    </div>
-
   </div>
 
-  <!-- Elementos "puente": se asoman fuera del marco 16:9 hacia la Sección 2 -->
+  <!-- 6. OJITOS PUENTE (z-[40]: Arriba de la mujer, saliendo a la sección 2) -->
   <div class="absolute inset-0 w-full max-w-[1440px] mx-auto pointer-events-none z-[40]">
-    <img src="src/assets/section-1/estrellas_section1.svg" alt="Estrellas" class="absolute bottom-[-15%] left-[2%] w-[28%] drop-shadow-md">
     <img src="src/assets/section-1/ojitos_entre_section.svg" alt="Ojos" class="absolute bottom-[-15%] right-[3%] w-[20%] drop-shadow-lg pointer-events-auto cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2">
   </div>
+
 </section>
 
+
 <!-- ================= SECCIÓN 2 ================= -->
-<section id="section-2" class="relative z-[0] w-full bg-brand-dark overflow-visible">
+<section id="section-2" class="relative z-[0] w-full bg-brand-dark bg-[url('../assets/section-2/fondo-section-2.png')] bg-cover bg-center overflow-visible">
 
-  <div class="relative w-full max-w-[1440px] mx-auto aspect-video overflow-hidden z-[10]">
+  <!-- Contenedor Proporcional 16:9 (Macro-Universo) -->
+  <div class="relative w-full max-w-[1440px] mx-auto aspect-video z-[10]" style="container-type: inline-size;">
 
-    <div class="absolute inset-0 bg-[url('../assets/section-2/fondo-section-2.png')] bg-cover bg-center overflow-hidden z-[1]">
+<!-- ========================================================================= -->
+    <!-- TICKET / GUEST PASS (Izquierda) -->
+    <!-- ========================================================================= -->
+    <div class="absolute top-0 left-0 h-full z-[3]">
 
-      <div class="absolute inset-0 bg-black/40 z-[2] pointer-events-none"></div>
+      <img src="src/assets/section-2/guest_section2.svg" alt="Guest" loading="lazy" class="h-full w-auto relative z-[2] drop-shadow-md pointer-events-none">
 
-      <div class="absolute top-0 left-0 h-full z-[3]">
+      <!-- Textos calculados con doble regla (Mobile / Desktop) -->
+      <div class="absolute inset-0 z-[5] text-brand-red">
 
-        <img src="src/assets/section-2/guest_section2.svg" alt="Guest" loading="lazy" class="h-full w-auto relative z-[2] drop-shadow-md pointer-events-none">
+        <h3 class="absolute top-[33%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2cqw,35px)]">VISUAL DESIGN :</h3>
+        <p class="absolute top-[40%] font-title left-[20%] text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,30px)]">ADOBE SUITE (PHOTOSHOP). CANVA PRO</p>
 
-        <div class="absolute inset-0 z-[5] text-brand-red tracking-tighter tracking-widest">
+        <h3 class="absolute top-[47%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2cqw,35px)]">EMAIL MARKETING :</h3>
+        <p class="absolute top-[54%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,30px)]">MAILJET. BREVO. GET RESPONSE</p>
 
-          <h3 class="absolute top-[34%] font-title left-[15%] text-[clamp(6px,2vw,25px)] leading-none">VISUAL DESIGN :</h3>
-          <p class="absolute top-[40%] font-title left-[20%] text-[clamp(6px,1.5vw,20px)] leading-none">ADOBE SUITE (PHOTOSHOP). CANVA PRO</p>
+        <h3 class="absolute top-[61%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2cqw,35px)]">WEBSITE CREATION :</h3>
+        <p class="absolute top-[68%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,30px)]">WIX. JIMDO. SHOPIFY</p>
 
-          <h3 class="absolute top-[48%] font-title left-[15%] text-[clamp(6px,2vw,25px)] leading-none">EMAIL MARKETING :</h3>
-          <p class="absolute top-[54%] font-title left-[20%] text-[clamp(6px,1.5vw,20px)] leading-none">MAILJET. BREVO. GET RESPONSE</p>
+        <h3 class="absolute top-[75%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2.5cqw,35px)]">VIDEO EDITING :</h3>
+        <p class="absolute top-[82%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,30px)]">PREMIERE PRO</p>
 
-          <h3 class="absolute top-[55%] font-title left-[15%] text-[clamp(6px,2vw,25px)] leading-none">WEBSITE CREATION :</h3>
-          <p class="absolute top-[68%] font-title left-[20%] text-[clamp(6px,1.5vw,20px)] leading-none">WIX. JIMDO. SHOPIFY</p>
+        <h3 class="absolute top-[88%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2.5cqw,35px)]">MEDIA MONITORING :</h3>
+        <p class="absolute top-[95%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,30px)]">ONCLUSIVE. CISION</p>
 
-          <h3 class="absolute top-[76%] font-title left-[15%] text-[clamp(6px,2vw,25px)] leading-none">VIDEO EDITING :</h3>
-          <p class="absolute top-[82%] font-title left-[20%] text-[clamp(6px,1.5vw,20px)] leading-none">PREMIERE PRO</p>
-
-          <h3 class="absolute top-[90%] font-title left-[15%] text-[clamp(6px,2vw,25px)] leading-none">MEDIA MONITORING :</h3>
-          <p class="absolute top-[96%] font-title left-[20%] text-[clamp(6px,1.5vw,20px)] leading-none">ONCLUSIVE. CISION</p>
-
-        </div>
       </div>
+    </div>
 
-      <div class="absolute top-[25%] right-[8%] z-[5] flex flex-col items-end pointer-events-none">
-        <h2 class="text-brand-red font-title tracking-tighter text-[5.5vw] max-[1440px]:xl:text-[80px] leading-none drop-shadow-md">TOOLS &</h2>
-        <h2 class="text-brand-red font-title tracking-tighter text-[6.5vw] max-[1440px]:xl:text-[95px] leading-none drop-shadow-md -mt-[2%]">SKILLS</h2>
-      </div>
+<!-- TÍTULOS DERECHA (TOOLS & SKILLS) -->
+    <div class="absolute top-[15%] right-[8%] z-[5] flex flex-col items-end pointer-events-none">
+      
+      <!-- TOOLS & (Empujado a la izquierda) -->
+      <h2 class="text-brand-red font-title tracking-tighter leading-none drop-shadow-md -translate-x-[15%]" style="font-size: clamp(30px, 8cqw, 90px);">
+        TOOLS &
+      </h2>
+      
+      <!-- SKILLS (Empujado a la derecha) -->
+      <h2 class="text-brand-red font-title tracking-tighter leading-none drop-shadow-md -mt-[2%] translate-x-[5%]" style="font-size: clamp(30px, 8cqw, 90px);">
+        SKILLS
+      </h2>
 
     </div>
-    <img src="src/assets/section-2/auto_section2.svg" alt="Auto" loading="lazy" class="absolute bottom-[-1%] right-[-4%] w-[40%] z-[15] drop-shadow-xl transition-transform duration-500 ease-out hover:-translate-x-6 hover:scale-105 cursor-pointer">
+
+    <!-- AUTO -->
+    <img src="src/assets/section-2/auto_section2.svg" alt="Auto" loading="lazy" class="absolute bottom-[-1%] right-[-4%] w-[43%] z-[15] drop-shadow-xl transition-transform duration-500 ease-out hover:-translate-x-6 hover:scale-105 cursor-pointer">
 
   </div>
 </section>
@@ -170,39 +194,55 @@
 
 
 <!-- ================= SECCIÓN 4  ================= -->
-<section id="section-4" class="relative w-full bg-brand-light overflow-visible">
+<section id="section-4" class="relative w-full bg-brand-light bg-[url('../assets/section-4/fondo_section4.png')] bg-cover bg-center overflow-visible z-[10]">
 
-  <div class="relative w-full max-w-[1440px] mx-auto aspect-video overflow-hidden bg-[url('../assets/section-4/fondo_section4.png')] bg-cover bg-center z-[10]">
+  <!-- Contenedor Proporcional 16:9 (Macro-Universo) -->
+  <div class="relative w-full max-w-[1440px] mx-auto aspect-video z-[10]" style="container-type: inline-size;">
 
-    <div class="absolute top-[4%] left-[5%] md:left-[8%] z-[10]">
-      <h2 class="text-brand-red font-title text-[clamp(6px,9vw,50px)] leading-[0.85] drop-shadow-sm">PUBLIC<br>RELATIONS</h2>
-      <p class="font-title font-bold text-[clamp(6px,1.5vw,22px)] text-brand-dark mt-[70px]">MUSIC INDUSTRY - MEDIA STRATEGY</p>
+    <!-- TÍTULO IZQUIERDA (PUBLIC RELATIONS) -->
+    <div class="absolute top-[6%] left-[5%] md:left-[8%] z-[10] flex flex-col justify-start">
+      <h2 class="text-brand-red font-title leading-[0.85] drop-shadow-sm" style="font-size: clamp(8px, 5cqw, 130px);">
+        PUBLIC<br>RELATIONS
+      </h2>
+      <!-- Reemplazamos el margen fijo (mt-[70px]) por un margen dinámico (mt-[2cqw]) -->
+      <p class="font-title font-bold text-brand-dark mt-[2cqw]" style="font-size: clamp(8px, 1.8cqw, 25px); letter-spacing: 0.05em;">
+        MUSIC INDUSTRY - MEDIA STRATEGY
+      </p>
     </div>
 
-    <div class="absolute top-[4%] right-[5%] md:right-[8%] z-[10] text-right">
-      <h2 class="text-brand-red font-title text-[clamp(6px,11vw,65px)] leading-[1] drop-shadow-sm">SOME<br>OF MY<br>WORK</h2>
+    <!-- TÍTULO DERECHA (SOME OF MY WORK) -->
+    <div class="absolute top-[6%] right-[5%] md:right-[8%] z-[10] text-right">
+      <h2 class="text-brand-red font-title leading-[0.9] drop-shadow-sm" style="font-size: clamp(8px, 5cqw, 130px);">
+        SOME<br>OF MY<br>WORK
+      </h2>
     </div>
 
-    <div class="absolute bottom-[2%] left-[50%] transform -translate-x-1/2 z-[10]">
-      <img src="src/assets/section-4/deezer.svg" alt="Deezer" class="h-[50px] md:h-[70px] drop-shadow-md">
+    <!-- LOGO DEEZER -->
+    <!-- Su altura ahora es dinámica, no fija -->
+    <div class="absolute bottom-[4%] left-[50%] transform -translate-x-1/2 z-[10]">
+      <img src="src/assets/section-4/deezer.svg" alt="Deezer" class="drop-shadow-md w-auto" style="height: clamp(25px, 4.5cqw, 70px);">
     </div>
 
+    <!-- CARRUSEL ANIMADO -->
+    <!-- Las imágenes ya no tienen 'w-[300px]', ahora usan clamp() para encogerse en mobile -->
     <div id="carousel-container-4" tabindex="0" class="absolute inset-0 w-full h-full overflow-hidden pointer-events-auto cursor-pointer z-[5] bg-transparent outline-none">
-      <img src="src/assets/section-4/imagen1.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[1]">
-      <img src="src/assets/section-4/imagen2.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[2]">
-      <img src="src/assets/section-4/imagen3.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[3]">
-      <img src="src/assets/section-4/imagen4.png" class="carousel-card absolute top-[59%] left-0 w-[220px] md:w-[300px] aspect-square object-cover shadow-2xl z-[4]">
+      <img src="src/assets/section-4/imagen1.png" class="carousel-card absolute left-0 aspect-square object-cover shadow-2xl z-[1]" style="top: 59%; width: clamp(90px, 20cqw, 300px);">
+      <img src="src/assets/section-4/imagen2.png" class="carousel-card absolute left-0 aspect-square object-cover shadow-2xl z-[2]" style="top: 59%; width: clamp(90px, 20cqw, 300px);">
+      <img src="src/assets/section-4/imagen3.png" class="carousel-card absolute left-0 aspect-square object-cover shadow-2xl z-[3]" style="top: 59%; width: clamp(90px, 20cqw, 300px);">
+      <img src="src/assets/section-4/imagen4.png" class="carousel-card absolute left-0 aspect-square object-cover shadow-2xl z-[4]" style="top: 59%; width: clamp(90px, 20cqw, 300px);">
     </div>
 
   </div>
 
-  <!-- Elemento "puente": la estrella se asoma entre Sección 4 y Sección 5 -->
+  <!-- ELEMENTO PUENTE (ESTRELLA QUE GIRA) -->
+  <!-- También se hizo escalable para que no se vea gigante en celulares -->
   <div class="absolute inset-0 w-full max-w-[1440px] mx-auto pointer-events-none z-[40]">
-    <div class="absolute bottom-[0px] left-[5%] md:left-[8%] w-[100px] md:w-[150px] transform translate-y-1/2 z-[20]">
+    <div class="absolute bottom-[0px] left-[5%] md:left-[8%] transform translate-y-1/2 z-[20]" style="width: clamp(60px, 10cqw, 150px);">
       <img src="src/assets/section-4/estrella.png" alt="Estrella" class="w-full h-full drop-shadow-xl animate-[spin_6s_linear_infinite]">
     </div>
   </div>
 </section>
+
 
   <!-- ================= SECCIÓN 5 ================= -->
 <section id="section-5" class="relative w-full z-[3] overflow-visible">
@@ -236,69 +276,115 @@
   </div>
 </section>
  
-  <!-- ================= SECCIÓN 6 ================= -->
+<!-- ================= SECCIÓN 6 ================= -->
 <section id="section-6" class="relative w-full bg-[url('../assets/section-4/fondo_section4.png')] bg-cover bg-center bg-no-repeat overflow-visible z-[1]">
 
-  <div class="relative w-full max-w-[1440px] mx-auto aspect-video overflow-hidden">
+  <div class="relative w-full max-w-[1440px] mx-auto aspect-video overflow-hidden" style="container-type: inline-size;">
 
-    <div class="absolute top-[8%] md:top-[8%] left-[5%] md:left-[8%] z-[10]">
-      <h2 class="text-brand-red font-title text-[clamp(6px,11vw,75px)] leading-[0.85] drop-shadow-sm uppercase">
+    <!-- TÍTULO PRINCIPAL (MORE ABOUT ME) -->
+    <div class="absolute top-[8%] left-[5%] md:left-[8%] z-[10]">
+      <h2 class="text-brand-red font-title leading-[0.85] drop-shadow-sm uppercase" style="font-size: clamp(15px, 6cqw, 140px);">
         MORE<br>ABOUT<br>ME
       </h2>
     </div>
 
-    <div class="absolute top-[38%] md:top-[48%] left-[20%] md:left-[22%] z-[10]">
-      <h3 class="text-brand-red font-title text-[clamp(6px,6vw,40px)] leading-[0.85] drop-shadow-sm uppercase">
+    <!-- SUBTÍTULO (PODCAST) -->
+    <div class="absolute top-[38%] md:top-[50%] left-[20%] md:left-[20%] z-[10]">
+      <h3 class="text-brand-red font-title leading-[0.85] drop-shadow-sm uppercase" style="font-size: clamp(11px, 3cqw, 65px);">
         PODCAST -<br>RADIO<br>PRESENTER
       </h3>
     </div>
 
-    <img src="src/assets/section-6/locutora_section6.svg" alt="Locutora" class="absolute bottom-0 left-[0%] md:left-[-2%] w-[60%] md:w-[35%] max-w-[450px] z-[15] drop-shadow-2xl pointer-events-none">
+    <!-- IMAGEN LOCUTORA -->
+    <img src="src/assets/section-6/locutora_section6.svg" alt="Locutora" class="absolute bottom-0 left-[0%] md:left-[-2%] z-[15] drop-shadow-2xl pointer-events-none" style="width: clamp(110px, 35cqw, 550px);">
 
-    <a href="https://open.spotify.com/episode/1hkiwRAwEVrqx8ZT5Wul9d" target="_blank" rel="noopener noreferrer" class="absolute top-[25%] md:top-[20%] left-[45%] md:left-[48%] w-[35%] md:w-[20%] max-w-[250px] z-[5] cursor-pointer">
-      <img src="src/assets/section-6/valentin_section6.svg" alt="Saint Valentin" class="w-full h-auto drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-3">
-    </a>
+    <!-- ========================================================================= -->
+    <!-- GRUPO 1: VERSIÓN DESKTOP (Se oculta en celulares con "hidden md:block") -->
+    <!-- ========================================================================= -->
+    <div class="hidden md:block absolute inset-0 z-[5] pointer-events-none">
+      
+      <!-- Saint Valentin -->
+      <a href="https://open.spotify.com/episode/1hkiwRAwEVrqx8ZT5Wul9d" target="_blank" rel="noopener noreferrer" class="absolute top-[20%] left-[48%] z-[5] cursor-pointer block pointer-events-auto" style="width: clamp(50px, 22cqw, 320px);">
+        <img src="src/assets/section-6/valentin_section6.svg" alt="Saint Valentin" class="w-full h-auto drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-3">
+      </a>
+      
+      <!-- Radio -->
+      <a href="https://open.spotify.com/episode/41oY3qRHP4W6xaxJV1ZwaT" target="_blank" rel="noopener noreferrer" class="absolute top-[60%] left-[50%] z-[6] cursor-pointer block pointer-events-auto" style="width: clamp(50px, 22cqw, 260px);">
+        <img src="src/assets/section-6/radio_section6.svg" alt="Radio" class="w-full h-auto drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:rotate-3">
+      </a>
+      
+      <!-- Comair Logo -->
+      <img src="src/assets/section-6/comair_section6.svg" alt="Comair Logo" class="absolute top-[35%] right-[10%] z-[5] drop-shadow-md transition-transform duration-300 hover:scale-110 cursor-pointer pointer-events-auto" style="width: clamp(90px, 16cqw, 230px);">
+      
+      <!-- Ces Soirées -->
+      <a href="https://open.spotify.com/episode/6d1rKOMX2YsdhEbPgnSpTS" target="_blank" rel="noopener noreferrer" class="absolute top-[60%] right-[8%] z-[7] cursor-pointer block pointer-events-auto" style="width: clamp(120px, 22cqw, 280px);">
+        <img src="src/assets/section-6/ces_section6.svg" alt="Ces Soirées" class="w-full h-auto drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-2">
+      </a>
+    </div>
 
-    <a href="https://open.spotify.com/episode/41oY3qRHP4W6xaxJV1ZwaT" target="_blank" rel="noopener noreferrer" class="absolute top-[55%] md:top-[60%] left-[45%] md:left-[50%] w-[30%] md:w-[17%] max-w-[200px] z-[6] cursor-pointer">
-      <img src="src/assets/section-6/radio_section6.svg" alt="Radio" class="w-full h-auto drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:rotate-3">
-    </a>
-
-    <img src="src/assets/section-6/comair_section6.svg" alt="Comair Logo" class="absolute top-[38%] md:top-[35%] right-[5%] md:right-[10%] w-[30%] md:w-[16%] max-w-[180px] z-[5] drop-shadow-md transition-transform duration-300 hover:scale-110 cursor-pointer">
-
-    <a href="https://open.spotify.com/episode/6d1rKOMX2YsdhEbPgnSpTS" target="_blank" rel="noopener noreferrer" class="absolute top-[65%] md:top-[60%] right-[5%] md:right-[8%] w-[35%] md:w-[18%] max-w-[220px] z-[7] cursor-pointer">
-      <img src="src/assets/section-6/ces_section6.svg" alt="Ces Soirées" class="w-full h-auto drop-shadow-xl transition-transform duration-500 hover:scale-110 hover:-rotate-2">
-    </a>
+    <!-- ========================================================================= -->
+    <!-- GRUPO 2: VERSIÓN MOBILE (Se oculta en PC con "block md:hidden") -->
+    <!-- ========================================================================= -->
+    <div class="block md:hidden absolute inset-0 z-[5] pointer-events-none">
+      
+      <!-- Saint Valentin -->
+      <!-- Usa w-[28%] y coordenadas ajustadas para agruparse bien a la derecha -->
+      <a href="https://open.spotify.com/episode/1hkiwRAwEVrqx8ZT5Wul9d" target="_blank" rel="noopener noreferrer" class="absolute top-[15%] right-[32%] z-[5] cursor-pointer block w-[20%] pointer-events-auto">
+        <img src="src/assets/section-6/valentin_section6.svg" alt="Saint Valentin" class="w-full h-auto drop-shadow-xl active:scale-90 transition-transform">
+      </a>
+      
+      <!-- Radio -->
+      <a href="https://open.spotify.com/episode/41oY3qRHP4W6xaxJV1ZwaT" target="_blank" rel="noopener noreferrer" class="absolute top-[52%] right-[32%] z-[6] cursor-pointer block w-[18%] pointer-events-auto">
+        <img src="src/assets/section-6/radio_section6.svg" alt="Radio" class="w-full h-auto drop-shadow-xl active:scale-90 transition-transform">
+      </a>
+      
+      <!-- Comair Logo -->
+      <img src="src/assets/section-6/comair_section6.svg" alt="Comair Logo" class="absolute top-[30%] right-[5%] z-[5] drop-shadow-md active:scale-90 transition-transform w-[18%] pointer-events-auto">
+      
+      <!-- Ces Soirées -->
+      <a href="https://open.spotify.com/episode/6d1rKOMX2YsdhEbPgnSpTS" target="_blank" rel="noopener noreferrer" class="absolute top-[52%] right-[4%] z-[7] cursor-pointer block w-[18%] pointer-events-auto">
+        <img src="src/assets/section-6/ces_section6.svg" alt="Ces Soirées" class="w-full h-auto drop-shadow-xl active:scale-90 transition-transform">
+      </a>
+    </div>
 
   </div>
 </section>
 
-  <!-- ================= SECCIÓN 7 ================= -->
-<section id="section-7" class="relative w-full z-[21] overflow-visible">
+<!-- ================= SECCIÓN 7 ================= -->
+<!-- 1. El fondo se mueve a la etiqueta section para cubrir pantallas gigantes -->
+<section id="section-7" class="relative w-full z-[21] overflow-visible bg-[url('../assets/section-5/fondo_section5.png')] bg-cover bg-center bg-no-repeat">
 
-  <div class="relative w-full max-w-[1440px] mx-auto aspect-video overflow-hidden bg-[url('../assets/section-5/fondo_section5.png')] bg-cover bg-center bg-no-repeat">
+  <!-- 2. Se añade 'container-type: inline-size;' para crear el Macro-Universo -->
+  <div class="relative w-full max-w-[1440px] mx-auto aspect-video overflow-hidden" style="container-type: inline-size;">
 
+    <!-- TÍTULO PRINCIPAL -->
     <div class="absolute top-[10%] left-[5%] md:left-[8%] z-[10]">
-      <h2 class="text-brand-red font-title text-[clamp(6px,9vw,50px)] leading-[0.85] drop-shadow-sm uppercase">
+      <!-- Se cambia 'vw' por 'cqw' y se amplían los topes -->
+      <h2 class="text-brand-red font-title leading-[0.85] drop-shadow-sm uppercase" style="font-size: clamp(15px, 5cqw, 130px);">
         PHOTOGRAPHER
       </h2>
     </div>
 
-    <div id="carousel-container-7" tabindex="0" class="absolute top-[35%] left-1/2 -translate-x-1/2 w-[90%] md:w-[84%] h-[50%] z-[5] overflow-hidden pointer-events-auto cursor-pointer bg-transparent outline-none">
-      <img src="src/assets/section-7/imagen1.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[1]">
-      <img src="src/assets/section-7/imagen2.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[2]">
-      <img src="src/assets/section-7/imagen3.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[3]">
-      <img src="src/assets/section-7/imagen4.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[4]">
-      <img src="src/assets/section-7/imagen5.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[5]">
-      <img src="src/assets/section-7/imagen6.png" class="carousel-card-7 absolute top-0 left-0 w-[180px] md:w-[350px] h-full object-cover shadow-2xl z-[6]">
+    <!-- CARRUSEL 3D -->
+    <div id="carousel-container-7" tabindex="0" class="absolute top-[25%] left-1/2 -translate-x-1/2 w-[90%] md:w-[84%] h-[50%] z-[5] overflow-hidden pointer-events-auto cursor-pointer bg-transparent outline-none">
+      <!-- Se reemplazan las clases w-[180px] md:w-[350px] por un ancho dinámico clamp() -->
+      <img src="src/assets/section-7/imagen1.png" class="carousel-card-7 absolute top-0 left-0 h-full object-cover shadow-2xl z-[1]" style="width: clamp(100px, 22cqw, 400px);">
+      <img src="src/assets/section-7/imagen2.png" class="carousel-card-7 absolute top-0 left-0 h-full object-cover shadow-2xl z-[2]" style="width: clamp(100px, 22cqw, 400px);">
+      <img src="src/assets/section-7/imagen3.png" class="carousel-card-7 absolute top-0 left-0 h-full object-cover shadow-2xl z-[3]" style="width: clamp(100px, 22cqw, 400px);">
+      <img src="src/assets/section-7/imagen4.png" class="carousel-card-7 absolute top-0 left-0 h-full object-cover shadow-2xl z-[4]" style="width: clamp(100px, 22cqw, 400px);">
+      <img src="src/assets/section-7/imagen5.png" class="carousel-card-7 absolute top-0 left-0 h-full object-cover shadow-2xl z-[5]" style="width: clamp(100px, 22cqw, 400px);">
+      <img src="src/assets/section-7/imagen6.png" class="carousel-card-7 absolute top-0 left-0 h-full object-cover shadow-2xl z-[6]" style="width: clamp(100px, 22cqw, 400px);">
     </div>
 
   </div>
 
-  <!-- Elementos "puente": estrellas que se asoman desde la Sección 6 -->
-  <div class="absolute inset-0 w-full max-w-[1440px] mx-auto pointer-events-none z-[40]">
-    <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-0 left-[35%] transform -translate-x-1/2 -translate-y-1/2 w-[80px] md:w-[120px] drop-shadow-md">
-    <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-0 right-[25%] transform translate-y-[-50%] w-[80px] md:w-[120px] drop-shadow-md">
+  <!-- ELEMENTOS PUENTE (Estrellas desde la Sección 6) -->
+  <div class="absolute inset-0 w-full max-w-[1440px] mx-auto pointer-events-none z-[40]" style="container-type: inline-size;">
+    <!-- Las estrellas también se vuelven elásticas reemplazando los anchos fijos -->
+    <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-0 left-[35%] transform -translate-x-1/2 -translate-y-1/2 drop-shadow-md" style="width: clamp(40px, 8cqw, 140px);">
+    <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-0 right-[25%] transform translate-y-[-50%] drop-shadow-md" style="width: clamp(40px, 8cqw, 140px);">
   </div>
+  
 </section>
 
   <script src="src/js/animaciones.js"></script>  
