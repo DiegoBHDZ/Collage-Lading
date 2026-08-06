@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeanne Rigal | Portfolio</title>
+  <title>Jeanne Rigal Page</title>
   <link href="./src/css/output.css" rel="stylesheet">
 </head>
 <body class="bg-brand-dark overflow-x-hidden text-brand-dark">
@@ -14,70 +14,78 @@
   <!-- Overlay oscuro base -->
   <div class="absolute inset-0 bg-black/40 z-[1] pointer-events-none"></div>
 
-  <!-- Contenedor Proporcional 16:9 -->
-  <div class="relative w-full max-w-[1440px] mx-auto aspect-video z-[10]">
+  <!-- 
+    =======================================================================
+    LIENZO MAESTRO:
+    Móvil: h-[100dvh] (100% de la pantalla)
+    PC: md:h-auto md:aspect-video (Recupera tu formato original)
+    =======================================================================
+  -->
+  <div class="relative w-full max-w-[1440px] mx-auto h-[100dvh] md:h-auto md:aspect-video z-[10]">
 
-    <!-- 1. EDIFICIO (z-[2]) -->
-    <img src="src/assets/section-1/edificio_section1.svg" alt="Edificio" class="absolute bottom-[0%] left-[2%] w-[57%] z-[2] drop-shadow-xl pointer-events-none">
+    <!-- 1. EDIFICIO -->
+    <img src="src/assets/section-1/edificio_section1.svg" alt="Edificio" class="absolute bottom-[0%] md:bottom-[0%] left-[-15%] md:left-[2%] w-[130%] md:w-[57%] z-[2] drop-shadow-xl pointer-events-none">
 
-    <!-- 2. ESTRELLAS PUENTE (z-[4]: Arriba del edificio, abajo del estuche, salen a la sección 2) -->
-    <img src="src/assets/section-1/estrellas_section1.svg" alt="Estrellas" class="absolute bottom-[-15%] left-[2%] w-[28%] z-[4] drop-shadow-md pointer-events-none">
+    <!-- 2. ESTRELLAS PUENTE -->
+    <img src="src/assets/section-1/estrellas_section1.svg" alt="Estrellas" class="absolute bottom-[5%] md:bottom-[-15%] left-[0%] md:left-[2%] w-[45%] md:w-[28%] z-[4] drop-shadow-md pointer-events-none">
 
-    <img src="src/assets/section-1/ojos_section1.svg" alt="Ojos Dorados" class="absolute top-[18%] right-[12%] w-[15%] z-[5] drop-shadow-md animate-[pulse_4s_ease-in-out_infinite] cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 active:rotate-6">
+    <!-- 3. OJOS DORADOS -->
+    <img src="src/assets/section-1/ojos_section1.svg" alt="Ojos Dorados" class="absolute top-[12%] md:top-[18%] right-[5%] md:right-[12%] w-[22%] md:w-[15%] z-[5] drop-shadow-md animate-[pulse_4s_ease-in-out_infinite] cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 active:rotate-6">
 
-<!-- 3. ESTUCHE GRIS (z-[6]: Arriba de las estrellas) -->
-    <div class="absolute -top-[7%] left-[18%] z-[6] w-[43%]" style="container-type: inline-size;">
+    <!-- 4. ESTUCHE GRIS -->
+    <div class="absolute -top-[2%] md:-top-[7%] left-[7%] md:left-[18%] z-[6] w-[85%] md:w-[43%]" style="container-type: inline-size;">
       <img src="src/assets/section-1/lienzo_gris.svg" alt="Lienzo Gris" class="w-full h-auto drop-shadow-2xl relative z-[10]">
       <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[32%] left-0 w-full h-auto z-[15] pointer-events-none">
       <img src="src/assets/section-1/sombra_section1.svg" alt="Sombra Estuche" class="absolute top-[58%] left-0 w-full h-auto z-[15] pointer-events-none">
 
       <!-- Texto Superior (Tapa) -->
-      <div class="absolute z-[21] flex flex-col justify-center" style="top: 42%; bottom: 52%; left: 22%; right: 10%;">
-        <p class="text-brand-light font-body font-bold" style="font-size: clamp(6px, 5cqw, 50px); line-height: 1.4;">
+      <!-- Las clases md:text-[clamp(...)] aseguran que la PC mantenga exactamente los mismos límites matemáticos originales -->
+      <div class="absolute z-[21] flex flex-col justify-center" style="top: 40%; bottom: 52%; left: 22%; right: 10%;">
+        <p class="text-brand-light font-body font-bold text-[clamp(10px,4cqw,50px)] md:text-[clamp(6px,5cqw,50px)]" style="line-height: 1.4;">
           Helping brands,<br>organizations, and cultural<br>projects tell their story,
         </p>
       </div>
       
       <!-- Texto Inferior (Base) -->
       <div class="absolute z-[21] flex flex-col justify-center" style="top: 61%; bottom: 17%; left: 23%; right: 10%;">
-        <p class="text-brand-light font-body" style="letter-spacing: 0.03em; font-weight: bold; font-size: clamp(6px, 5cqw, 50px); line-height: 1.4;">
+        <p class="text-brand-light font-body text-[clamp(10px,4cqw,50px)] md:text-[clamp(6px,5cqw,50px)]" style="letter-spacing: 0.03em; font-weight: bold; line-height: 1.4;">
           & build meaningful<br>connections, to grow<br>their impact through<br>content, media, and<br>community.
         </p>
       </div>
     </div>
 
-    <!-- 4. CUADRO (z-[12]) -->
-    <img src="src/assets/section-1/cuadro_section1.svg" alt="Cuadro" class="absolute top-[48%] right-[8%] w-[20%] z-[12] drop-shadow-md -rotate-6">
+    <!-- 5. CUADRO -->
+    <img src="src/assets/section-1/cuadro_section1.svg" alt="Cuadro" class="absolute top-[55%] md:top-[48%] right-[2%] md:right-[8%] w-[35%] md:w-[20%] z-[12] drop-shadow-md -rotate-6">
 
-    <!-- ========================================================================= -->
-    <!-- 5. MUJER (z-[15]): CAJA INVISIBLE CON OVERFLOW-HIDDEN PARA CORTAR EXCESOS -->
-    <!-- ========================================================================= -->
+    <!-- 6. MUJER -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none z-[15]">
-      <img src="src/assets/section-1/mujer_section1.png" alt="Mujer" class="absolute -bottom-[15%] -right-[10%] w-[25%] drop-shadow-xl">
+      <img src="src/assets/section-1/mujer_section1.png" alt="Mujer" class="absolute -bottom-[10%] md:-bottom-[15%] right-[-10%] md:-right-[10%] w-[55%] md:w-[25%] drop-shadow-xl">
     </div>
 
-    <header class="absolute top-[4%] left-0 w-full flex justify-center gap-[8%] items-center px-[5%] z-[50]">
-      <a href="#contact" class="w-[25%] max-w-[200px] flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 -mt-[30px]">
+    <!-- HEADER NAVEGACIÓN -->
+    <header class="absolute top-[3%] md:top-[4%] left-0 w-full flex justify-center gap-[4%] md:gap-[8%] items-center px-[5%] z-[50]">
+      <a href="#contact" class="w-[30%] md:w-[25%] max-w-[200px] flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 -mt-[15px] md:-mt-[30px]">
         <img src="src/assets/section-1/contact.png" alt="Contact" class="w-full h-auto object-contain drop-shadow-md">
       </a>
       <a href="#" class="flex flex-col items-center justify-center hover:opacity-80 transition-opacity shrink-0">
-        <span class="text-brand-red font-title font-black tracking-tighter text-[clamp(16px,4vw,55px)] leading-none drop-shadow-md">JEANNE</span>
-        <span class="text-brand-red font-title font-black tracking-tighter text-[clamp(16px,4vw,55px)] leading-none drop-shadow-md">RIGAL</span>
+        <span class="text-brand-red font-title font-black tracking-tighter text-[clamp(16px,6vw,34px)] md:text-[clamp(16px,4vw,34px)] leading-none drop-shadow-md">JEANNE</span>
+        <span class="text-brand-red font-title font-black tracking-tighter text-[clamp(16px,6vw,34px)] md:text-[clamp(16px,4vw,34px)] leading-none drop-shadow-md">RIGAL</span>
       </a>
-      <a href="#services" class="w-[25%] max-w-[200px] flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 -mt-[30px]">
+      <a href="#services" class="w-[30%] md:w-[25%] max-w-[200px] flex justify-center items-center cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2 -mt-[15px] md:-mt-[30px]">
         <img src="src/assets/section-1/services.png" alt="Services" class="w-full h-auto object-contain drop-shadow-md">
       </a>
     </header>
 
-    <h1 class="absolute top-[23%] left-[3%] text-brand-red font-title text-[clamp(40px,9vw,125px)] leading-none z-[30] drop-shadow-md pointer-events-none">
-      MEET ME
+    <!-- TÍTULO PRINCIPAL -->
+    <h1 class="absolute top-[17%] md:top-[26%] left-[5%] md:left-[3%] text-brand-red font-title text-[clamp(28px,9vw,54px)] md:text-[clamp(5px,5vw,54px)] leading-[0.9] md:leading-none z-[30] drop-shadow-md pointer-events-none max-w-[90%] md:max-w-none">
+      WHERE IDEAS MEET STRATEGY
     </h1>
 
   </div>
 
-  <!-- 6. OJITOS PUENTE (z-[40]: Arriba de la mujer, saliendo a la sección 2) -->
+  <!-- 7. OJITOS PUENTE -->
   <div class="absolute inset-0 w-full max-w-[1440px] mx-auto pointer-events-none z-[40]">
-    <img src="src/assets/section-1/ojitos_entre_section.svg" alt="Ojos" class="absolute bottom-[-15%] right-[3%] w-[20%] drop-shadow-lg pointer-events-auto cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2">
+    <img src="src/assets/section-1/ojitos_entre_section.svg" alt="Ojos" class="absolute bottom-[2%] md:bottom-[-15%] right-[5%] md:right-[3%] w-[25%] md:w-[20%] drop-shadow-lg pointer-events-auto cursor-pointer transition-all duration-200 hover:scale-110 active:scale-90 active:translate-y-2">
   </div>
 
 </section>
@@ -99,20 +107,20 @@
       <!-- Textos calculados con doble regla (Mobile / Desktop) -->
       <div class="absolute inset-0 z-[5] text-brand-red">
 
-        <h3 class="absolute top-[33%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2cqw,35px)]">VISUAL DESIGN :</h3>
-        <p class="absolute top-[40%] font-title left-[20%] text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,30px)]">ADOBE SUITE (PHOTOSHOP). CANVA PRO</p>
+        <h3 class="absolute top-[33%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2cqw,25px)]">VISUAL DESIGN :</h3>
+        <p class="absolute top-[40%] font-title left-[20%] text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,20px)]">ADOBE SUITE (PHOTOSHOP). CANVA PRO</p>
 
-        <h3 class="absolute top-[47%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2cqw,35px)]">EMAIL MARKETING :</h3>
-        <p class="absolute top-[54%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,30px)]">MAILJET. BREVO. GET RESPONSE</p>
+        <h3 class="absolute top-[47%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2cqw,25px)]">EMAIL MARKETING :</h3>
+        <p class="absolute top-[54%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,20px)]">MAILJET. BREVO. GET RESPONSE</p>
 
-        <h3 class="absolute top-[61%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2cqw,35px)]">WEBSITE CREATION :</h3>
-        <p class="absolute top-[68%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,30px)]">WIX. JIMDO. SHOPIFY</p>
+        <h3 class="absolute top-[61%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2cqw,25px)]">WEBSITE CREATION :</h3>
+        <p class="absolute top-[68%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,20px)]">WIX. JIMDO. SHOPIFY</p>
 
-        <h3 class="absolute top-[75%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2.5cqw,35px)]">VIDEO EDITING :</h3>
-        <p class="absolute top-[82%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,30px)]">PREMIERE PRO</p>
+        <h3 class="absolute top-[75%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2.5cqw,25px)]">VIDEO EDITING :</h3>
+        <p class="absolute top-[82%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,20px)]">PREMIERE PRO</p>
 
-        <h3 class="absolute top-[88%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2.5cqw,35px)]">MEDIA MONITORING :</h3>
-        <p class="absolute top-[95%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,30px)]">ONCLUSIVE. CISION</p>
+        <h3 class="absolute top-[88%] font-title left-[15%] leading-none text-[clamp(5px,1.9cqw,30px)] md:text-[clamp(10px,2.5cqw,25px)]">MEDIA MONITORING :</h3>
+        <p class="absolute top-[95%] font-title left-[20%] leading-none text-[clamp(5px,1.9cqw,22px)] md:text-[clamp(10px,2cqw,20px)]">ONCLUSIVE. CISION</p>
 
       </div>
     </div>
@@ -121,12 +129,12 @@
     <div class="absolute top-[15%] right-[8%] z-[5] flex flex-col items-end pointer-events-none">
       
       <!-- TOOLS & (Empujado a la izquierda) -->
-      <h2 class="text-brand-red font-title tracking-tighter leading-none drop-shadow-md -translate-x-[15%]" style="font-size: clamp(30px, 8cqw, 90px);">
+      <h2 class="text-brand-red font-title tracking-tighter leading-none drop-shadow-md -translate-x-[15%]" style="font-size: clamp(30px, 8cqw, 76px);">
         TOOLS &
       </h2>
       
       <!-- SKILLS (Empujado a la derecha) -->
-      <h2 class="text-brand-red font-title tracking-tighter leading-none drop-shadow-md -mt-[2%] translate-x-[5%]" style="font-size: clamp(30px, 8cqw, 90px);">
+      <h2 class="text-brand-red font-title tracking-tighter leading-none drop-shadow-md -mt-[2%] translate-x-[5%]" style="font-size: clamp(30px, 8cqw, 76px);">
         SKILLS
       </h2>
 
@@ -251,21 +259,21 @@
 
     <div class="absolute top-[6%] left-[6%] w-[46%] z-[10]">
       <h2 class="text-brand-red font-title text-[clamp(6px,5vw,50px)] leading-[0.85] drop-shadow-sm uppercase">SOCIAL MEDIA &<br>CONTENT</h2>
-      <p class="font-title text-[clamp(6px,1.3vw,18px)] text-brand-dark mt-[2%] uppercase">CINEMA INDUSTRY - INSTAGRAM</p>
+      <p class="font-title text-[clamp(6px,1.3vw,20px)] text-brand-dark mt-[2%] uppercase">CINEMA INDUSTRY – STRATEGY ON SOCIAL MEDIA (INSTAGRAM, LINKEDIN, TIKTOK)</p>
     </div>
 
-    <div id="carousel-container-5" tabindex="0" class="absolute top-[48%] left-[6%] w-[46%] h-[30%] overflow-hidden shadow-2xl bg-black/10 cursor-pointer pointer-events-auto outline-none transform-gpu isolate z-[10]">
+    <div id="carousel-container-5" tabindex="0" class="absolute top-[48%] left-[6%] w-[58%] h-[45%] overflow-hidden shadow-2xl bg-black/10 cursor-pointer pointer-events-auto outline-none transform-gpu isolate z-[10]">
       <img src="src/assets/section-5/cinema1.png" alt="Cinema 1" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[4] transition-transform duration-500 hover:scale-[1.03] hover:z-[5]">
       <img src="src/assets/section-5/cinema2.png" alt="Cinema 2" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[3] transition-transform duration-500 hover:scale-[1.03] hover:z-[5]">
       <img src="src/assets/section-5/cinema3.png" alt="Cinema 3" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[2] transition-transform duration-500 hover:scale-[1.03] hover:z-[5]">
       <img src="src/assets/section-5/cinema4.png" alt="Cinema 4" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[1] transition-transform duration-500 hover:scale-[1.03] hover:z-[5]">
     </div>
 
-    <img src="src/assets/section-5/playtime_section5.png" alt="Playtime" class="absolute top-[23%] right-[38%] w-[10%] drop-shadow-md z-[10]">
+    <img src="src/assets/section-5/playtime_section5.png" alt="Playtime" class="absolute top-[23%] right-[38%] w-[15%] drop-shadow-md z-[10]">
 
     <h3 class="absolute top-[23%] right-[8%] w-[28%] text-center font-title text-brand-dark text-[clamp(6px,1.6vw,20px)] tracking-widest uppercase drop-shadow-sm z-[10]">FILM POSTER</h3>
 
-    <img src="src/assets/section-5/film_poster.jpg" alt="Film Poster" class="absolute top-[29%] right-[13%] h-[40%] w-auto object-contain drop-shadow-2xl transition-transform duration-700 hover:scale-105 cursor-pointer z-[10]">
+    <img src="src/assets/section-5/film_poster.jpg" alt="Film Poster" class="absolute top-[29%] right-[13%] h-[45%] w-auto object-contain drop-shadow-2xl transition-transform duration-700 hover:scale-105 cursor-pointer z-[10]">
 
   </div>
 
@@ -359,8 +367,7 @@
 
     <!-- TÍTULO PRINCIPAL -->
     <div class="absolute top-[10%] left-[5%] md:left-[8%] z-[10]">
-      <!-- Se cambia 'vw' por 'cqw' y se amplían los topes -->
-      <h2 class="text-brand-red font-title leading-[0.85] drop-shadow-sm uppercase" style="font-size: clamp(15px, 5cqw, 130px);">
+      <h2 class="text-brand-red font-title leading-[0.85] drop-shadow-sm uppercase" style="font-size: clamp(5px, 5cqw, 35px);">
         PHOTOGRAPHER
       </h2>
     </div>
