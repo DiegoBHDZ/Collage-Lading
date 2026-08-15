@@ -127,18 +127,96 @@ document.addEventListener("DOMContentLoaded", () => {
   // INICIALIZACIÓN DE SECCIONES CON SUS PARÁMETROS ESPECÍFICOS
   // =========================================================
 
-  // SECCIÓN 4 (MUSIC PR) - 4 Cartas
-  crearBarajaInteractiva({
-    containerId: "#carousel-container-4",
-    cardClass: ".carousel-card",
-    unit: "cqw",
-    offsetY: "-50%", // Centrado vertical especial de esta sección
-    stackBase: 55,   // Posición inicial (Lomo derecho)
-    stackGap: 4,     // Cuánto se asoma cada carta apilada
-    spreadBase: 10,  // Posición de la primera carta al abrir
-    spreadGap: 20,   // Distancia entre cartas abiertas
-    scaleDrop: 0.05  // Reducción de tamaño en el fondo
-  });
+// SECCIÓN 4 (MUSIC PR) - LÓGICA DIVIDIDA (Móvil vs PC)
+  const container4 = document.querySelector("#carousel-container-4");
+  if (container4) {
+    if (window.innerWidth < 768) {
+      // ---------------------------------------------------------
+      // LÓGICA MÓVIL: Transición lenta, progresiva y centrada
+      // ---------------------------------------------------------
+      const cards4 = container4.querySelectorAll(".carousel-card");
+      let currentIndex4 = 0;
+      
+      // Prevenir el "pull-to-refresh" o tirones raros al deslizar
+      container4.style.touchAction = 'pan-y';
+
+      const updateMobileDeck4 = () => {
+        cards4.forEach((card, i) => {
+          // 1. Ampliamos las cartas desde JS para no tocar el HTML
+          card.style.width = "65vw"; 
+          card.style.maxWidth = "300px";
+          // 2. Animación lenta y fluida de 0.8 segundos
+          card.style.transition = "all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)";
+          card.style.transformOrigin = "center center";
+          
+          if (i < currentIndex4) {
+            // Cartas anteriores: Se deslizan muy suave hacia la izquierda y desaparecen
+            card.style.left = "0%";
+            card.style.transform = "translate(calc(-50% - 100vw), -50%) scale(0.9)";
+            card.style.opacity = "0";
+            card.style.zIndex = 1;
+          } else if (i === currentIndex4) {
+            // Carta actual: Queda perfectamente centrada para apreciarla
+            card.style.left = "50%";
+            card.style.transform = "translate(-50%, -50%) scale(1)";
+            card.style.opacity = "1";
+            card.style.zIndex = 10;
+          } else {
+            // Cartas futuras: Apiladas sutilmente en el borde derecho esperando su turno
+            const offset = (i - currentIndex4) * 8; // Distancia entre el lomo de las cartas
+            const scaleDrop = (i - currentIndex4) * 0.05; // Efecto de lejanía
+            card.style.left = "50%";
+            card.style.transform = `translate(calc(-50% + ${offset}vw), -50%) scale(${1 - scaleDrop})`;
+            card.style.opacity = "1";
+            card.style.zIndex = 10 - (i - currentIndex4);
+          }
+        });
+      };
+
+      // Cargar el estado inicial en móvil
+      updateMobileDeck4();
+
+      // Interacción: Avanzar por CLIC
+      container4.addEventListener("click", () => {
+        if (currentIndex4 < cards4.length - 1) currentIndex4++;
+        else currentIndex4 = 0; // Regresa al inicio
+        updateMobileDeck4();
+      });
+
+      // Interacción: Avanzar por DESLIZAMIENTO (SWIPE)
+      let startX = 0;
+      container4.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+      
+      container4.addEventListener("touchend", (e) => {
+        let endX = e.changedTouches[0].clientX;
+        if (startX - endX > 40 && currentIndex4 < cards4.length - 1) {
+          currentIndex4++; // Swipe a la izquierda -> Siguiente foto
+          updateMobileDeck4();
+        } else if (endX - startX > 40 && currentIndex4 > 0) {
+          currentIndex4--; // Swipe a la derecha -> Foto anterior
+          updateMobileDeck4();
+        }
+      }, { passive: true });
+
+    } else {
+      // ---------------------------------------------------------
+      // LÓGICA PC: Se mantiene intacto tu efecto de "Baraja Original"
+      // ---------------------------------------------------------
+      crearBarajaInteractiva({
+        containerId: "#carousel-container-4",
+        cardClass: ".carousel-card",
+        unit: "cqw",
+        offsetY: "-50%", 
+        stackBase: 55,   
+        stackGap: 4,     
+        spreadBase: 10,  
+        spreadGap: 20,   
+        scaleDrop: 0.05  
+      });
+    }
+  }
 
   // SECCIÓN 5 (CINEMA POSTERS) - 4 Cartas
   crearBarajaInteractiva({
