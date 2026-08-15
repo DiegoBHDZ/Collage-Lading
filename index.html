@@ -284,7 +284,7 @@
 
     <!-- LOGO DEEZER -->
     <div class="absolute bottom-[10%] md:bottom-[4%] left-[50%] transform -translate-x-1/2 z-[10]">
-      <img src="src/assets/section-4/deezer.svg" alt="Deezer" class="drop-shadow-md w-auto h-[clamp(35px,8cqw,70px)] md:h-[clamp(25px,4.5cqw,70px)]">
+      <img src="src/assets/section-4/deezer.svg" alt="Deezer" class="drop-shadow-md w-auto h-[clamp(50px,8cqw,70px)] md:h-[clamp(25px,4.5cqw,70px)]">
     </div>
 
     <!-- CARRUSEL ANIMADO -->
@@ -299,7 +299,7 @@
 
   <!-- ELEMENTO PUENTE (ESTRELLA QUE GIRA) -->
   <div class="absolute inset-0 w-full max-w-[1440px] mx-auto pointer-events-none z-[40]">
-    <div class="absolute bottom-[0px] left-[5%] md:left-[8%] transform translate-y-1/2 z-[20] w-[clamp(90px,18cqw,150px)] md:w-[clamp(60px,10cqw,150px)]">
+    <div class="absolute bottom-[0px] left-[50%] md:left-[8%] transform translate-y-1/2 z-[20] w-[clamp(90px,18cqw,150px)] md:w-[clamp(60px,10cqw,150px)]">
       <img src="src/assets/section-4/estrella.png" alt="Estrella" class="w-full h-full drop-shadow-xl animate-[spin_6s_linear_infinite]">
     </div>
   </div>
@@ -308,21 +308,10 @@
 <!-- ================= SECCIÓN 5 ================= -->
 <section id="section-5" class="relative w-full z-[3] overflow-visible">
 
-  <!-- 
-    =======================================================================
-    LIENZO MAESTRO:
-    Móvil: h-[100dvh] (100% de la pantalla)
-    PC: md:h-auto md:aspect-video (Recupera tu formato original)
-    =======================================================================
-  -->
   <div class="relative w-full max-w-[1440px] mx-auto h-[100dvh] md:h-auto md:aspect-video overflow-hidden bg-[url('../assets/section-5/fondo_section5.png')] bg-cover bg-center bg-no-repeat" style="container-type: inline-size;">
 
-    <!-- ========================================================================= -->
-    <!-- TÍTULOS PRINCIPALES -->
-    <!-- MOBILE: top-[8%] left-[5%] w-[90%] | PC: md:top-[6%] md:left-[6%] md:w-[46%] -->
-    <!-- ========================================================================= -->
+    <!-- TÍTULOS PRINCIPALES (Intactos) -->
     <div class="absolute top-[8%] md:top-[6%] left-[5%] md:left-[6%] w-[90%] md:w-[46%] z-[10]">
-      <!-- Fuente ampliada para móvil (35px a 50px) y protegida para PC -->
       <h2 class="text-brand-red font-title text-[clamp(35px,9cqw,50px)] md:text-[clamp(6px,5vw,50px)] leading-[0.85] drop-shadow-sm uppercase">
         SOCIAL MEDIA &<br>CONTENT
       </h2>
@@ -333,43 +322,35 @@
 
     <!-- ========================================================================= -->
     <!-- CARRUSEL INTERACTIVO -->
-    <!-- MOBILE: top-[30%] w-[90%] h-[35%] | PC: md:top-[48%] md:w-[58%] md:h-[45%] -->
+    <!-- MÓVIL: overflow-visible, bg-transparent (Para que no se corten ni se vea la caja) -->
+    <!-- PC: Recupera el md:overflow-hidden, md:bg-black/10 y md:shadow-2xl -->
     <!-- ========================================================================= -->
-    <div id="carousel-container-5" tabindex="0" class="absolute top-[30%] md:top-[48%] left-[5%] md:left-[6%] w-[90%] md:w-[58%] h-[35%] md:h-[45%] overflow-hidden shadow-2xl bg-black/10 cursor-pointer pointer-events-auto outline-none transform-gpu isolate z-[10]">
+    <div id="carousel-container-5" tabindex="0" class="absolute top-[30%] md:top-[48%] left-[5%] md:left-[6%] w-[90%] md:w-[58%] h-[35%] md:h-[45%] overflow-visible md:overflow-hidden bg-transparent md:bg-black/10 md:shadow-2xl cursor-pointer pointer-events-auto outline-none transform-gpu isolate z-[10]">
       <img src="src/assets/section-5/cinema1.png" alt="Cinema 1" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[4] transition-transform duration-500 hover:scale-[1.03] hover:z-[5]">
       <img src="src/assets/section-5/cinema2.png" alt="Cinema 2" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[3] transition-transform duration-500 hover:scale-[1.03] hover:z-[5]">
       <img src="src/assets/section-5/cinema3.png" alt="Cinema 3" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[2] transition-transform duration-500 hover:scale-[1.03] hover:z-[5]">
       <img src="src/assets/section-5/cinema4.png" alt="Cinema 4" class="cinema-card absolute top-0 left-0 w-1/4 h-full object-cover z-[1] transition-transform duration-500 hover:scale-[1.03] hover:z-[5]">
     </div>
 
-    <!-- ========================================================================= -->
-    <!-- LOGO PLAYTIME -->
-    <!-- MOBILE: top-[75%] left-[5%] w-[30%] | PC: md:top-[23%] md:left-auto md:right-[38%] md:w-[15%] -->
-    <!-- ========================================================================= -->
+    <!-- LOGO PLAYTIME (Intacto) -->
     <img src="src/assets/section-5/playtime_section5.png" alt="Playtime" class="absolute top-[75%] md:top-[23%] left-[5%] md:left-auto right-auto md:right-[38%] w-[30%] md:w-[15%] drop-shadow-md z-[10]">
 
-    <!-- ========================================================================= -->
-    <!-- TÍTULO FILM POSTER -->
-    <!-- MOBILE: top-[68%] right-[5%] w-[45%] | PC: md:top-[23%] md:right-[8%] md:w-[28%] -->
-    <!-- ========================================================================= -->
+    <!-- TÍTULO FILM POSTER (Intacto) -->
     <h3 class="absolute top-[68%] md:top-[23%] right-[5%] md:right-[8%] w-[45%] md:w-[28%] text-right md:text-center font-title text-brand-dark text-[clamp(14px,4cqw,20px)] md:text-[clamp(6px,1.6vw,20px)] tracking-widest uppercase drop-shadow-sm z-[10]">
       FILM POSTER
     </h3>
 
-    <!-- ========================================================================= -->
-    <!-- IMAGEN FILM POSTER -->
-    <!-- MOBILE: top-[74%] right-[5%] h-[22%] | PC: md:top-[29%] md:right-[13%] md:h-[45%] -->
-    <!-- ========================================================================= -->
+    <!-- IMAGEN FILM POSTER (Intacta) -->
     <img src="src/assets/section-5/film_poster.jpg" alt="Film Poster" class="absolute top-[74%] md:top-[29%] right-[5%] md:right-[13%] h-[22%] md:h-[45%] w-auto object-contain drop-shadow-2xl transition-transform duration-700 hover:scale-105 cursor-pointer z-[10]">
 
   </div>
 
-  <!-- ========================================================================= -->
-  <!-- ESTRELLAS PUENTE (Hacia la sección 6) -->
-  <!-- ========================================================================= -->
   <div class="absolute inset-0 w-full max-w-[1440px] mx-auto pointer-events-none z-[40]">
-    <img src="src/assets/section-5/estrella_section5.png" alt="Estrella" class="absolute bottom-[0px] left-[20%] md:left-[45%] transform -translate-x-1/2 translate-y-1/2 w-[clamp(60px,15cqw,150px)] md:w-[150px] drop-shadow-xl hover:rotate-12 transition-transform duration-300 pointer-events-auto">
-    <img src="src/assets/section-5/estrella_section5.png" alt="Estrella" class="absolute bottom-[0px] right-[5%] md:right-[10%] transform translate-y-1/2 w-[clamp(60px,15cqw,150px)] md:w-[150px] drop-shadow-xl hover:-rotate-12 transition-transform duration-300 pointer-events-auto">
+    <!-- MÓVIL: left-[50%] y -translate-x-1/2 para centrarla perfecto -->
+    <!-- PC: md:left-[8%] y md:translate-x-0 para mantenerla a la izquierda -->
+    <div class="absolute bottom-[0px] left-[40%] md:left-[8%] transform -translate-x-1/2 md:translate-x-0 translate-y-1/2 z-[20] w-[clamp(90px,18cqw,150px)] md:w-[clamp(60px,10cqw,150px)]">
+      <img src="src/assets/section-4/estrella.png" alt="Estrella" class="w-full h-full drop-shadow-xl animate-[spin_6s_linear_infinite]">
+    </div>
   </div>
 </section>
 
@@ -474,19 +455,21 @@
   -->
   <div class="relative w-full max-w-[1440px] mx-auto h-[100dvh] md:h-auto md:aspect-video overflow-hidden" style="container-type: inline-size;">
 
-    <!-- TÍTULO PRINCIPAL -->
+    <!-- ========================================================================= -->
+    <!-- TÍTULO PRINCIPAL (Igualado al formato de Podcast en móvil) -->
+    <!-- ========================================================================= -->
     <div class="absolute top-[12%] md:top-[10%] left-[5%] md:left-[8%] z-[10]">
-      <h2 class="text-brand-red font-title leading-[0.85] drop-shadow-sm uppercase text-[clamp(40px,11cqw,90px)] md:text-[clamp(5px,5cqw,35px)]">
+      <h2 class="text-brand-red font-title leading-[0.85] drop-shadow-sm uppercase text-[clamp(24px,7cqw,65px)] md:text-[clamp(5px,5cqw,35px)]">
         PHOTOGRAPHER
       </h2>
     </div>
 
     <!-- ========================================================================= -->
     <!-- CARRUSEL 3D -->
-    <!-- MÓVIL: left-[-5%] (recorrido a la izquierda), h-[40%] (más compacto) -->
-    <!-- PC: md:left-1/2 md:-translate-x-1/2 md:w-[84%] md:h-[50%] (original) -->
+    <!-- MÓVIL: left-0, w-full, overflow-visible (para centrado perfecto por JS) -->
+    <!-- PC: md:left-1/2 md:-translate-x-1/2 md:w-[84%] md:h-[50%] (original protegido) -->
     <!-- ========================================================================= -->
-    <div id="carousel-container-7" tabindex="0" class="absolute top-[32%] md:top-[25%] left-[-5%] md:left-1/2 transform translate-x-0 md:-translate-x-1/2 w-[90%] md:w-[84%] h-[40%] md:h-[50%] z-[5] overflow-visible md:overflow-hidden pointer-events-auto cursor-pointer bg-transparent outline-none">
+    <div id="carousel-container-7" tabindex="0" class="absolute top-[32%] md:top-[25%] left-0 md:left-1/2 transform translate-x-0 md:-translate-x-1/2 w-full md:w-[84%] h-[40%] md:h-[50%] z-[5] overflow-visible md:overflow-hidden pointer-events-auto cursor-pointer bg-transparent outline-none">
       
       <!-- IMÁGENES: MÓVIL 30cqw | PC md:22cqw (intacto) -->
       <img src="src/assets/section-7/imagen1.png" class="carousel-card-7 absolute top-0 left-0 h-full object-cover shadow-2xl z-[1] w-[clamp(110px,30cqw,400px)] md:w-[clamp(100px,22cqw,400px)]">
@@ -501,8 +484,8 @@
 
   <!-- ELEMENTOS PUENTE (Estrellas) -->
   <div class="absolute inset-0 w-full max-w-[1440px] mx-auto pointer-events-none z-[40]" style="container-type: inline-size;">
-    <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-[5%] md:top-0 left-[20%] md:left-[35%] transform -translate-x-1/2 -translate-y-1/2 drop-shadow-md w-[clamp(60px,15cqw,140px)] md:w-[clamp(40px,8cqw,140px)]">
-    <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-[5%] md:top-0 right-[5%] md:right-[25%] transform translate-y-[-50%] drop-shadow-md w-[clamp(60px,15cqw,140px)] md:w-[clamp(40px,8cqw,140px)]">
+    <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-[0%] md:top-0 left-[20%] md:left-[35%] transform -translate-x-1/2 -translate-y-1/2 drop-shadow-md w-[clamp(60px,15cqw,140px)] md:w-[clamp(40px,8cqw,140px)]">
+    <img src="src/assets/section-7/estrella_entre_section.svg" alt="Estrella Blanca" class="absolute top-[0%] md:top-0 right-[5%] md:right-[25%] transform translate-y-[-50%] drop-shadow-md w-[clamp(60px,15cqw,140px)] md:w-[clamp(40px,8cqw,140px)]">
   </div>
   
 </section>
